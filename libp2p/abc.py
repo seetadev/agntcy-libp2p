@@ -65,10 +65,41 @@ from libp2p.pubsub.pb import (
 )
 from libp2p.tools.anyio_service.api import ServiceAPI
 
+#--------------------------- upgradeable connection abc.py --------------------------
+
+class IUpgradeableConn(ABC):
+    """
+    Interface for a connection that can be upgraded.
+
+    This interface represents a connection that can be upgraded to support
+    security and/or multiplexing. It provides methods to check if the
+    connection already provides these features, allowing the upgrader to
+    skip unnecessary steps.
+
+    """
+
+    @property
+    def provides_security(self) -> bool:
+        """
+        Whether this connection already provides inbuilt security.
+
+        Connections from transports that bundle security (e.g. QUIC)
+        should override this to return ``True``.
+        """
+        return False
+    @property
+    def provides_muxing(self) -> bool:
+        """
+        Whether this connection already provides inbuilt multiplexing.
+
+        Connections from transports that bundle multiplexing (e.g. QUIC)
+        should override this to return ``True``.
+        """
+        return False
+
 # -------------------------- raw_connection interface.py --------------------------
 
-
-class IRawConnection(ReadWriteCloser):
+class IRawConnection(ReadWriteCloser, IUpgradeableConn):
     """
     Interface for a raw connection.
 
@@ -152,7 +183,7 @@ class AbstractSecureConn(ABC):
         """
 
 
-class ISecureConn(AbstractSecureConn, IRawConnection):
+class ISecureConn(AbstractSecureConn, IRawConnection, IUpgradeableConn):
     """
     Interface for a secure connection.
 
@@ -164,7 +195,7 @@ class ISecureConn(AbstractSecureConn, IRawConnection):
 # -------------------------- stream_muxer abc.py --------------------------
 
 
-class IMuxedConn(ABC):
+class IMuxedConn(ABC, IUpgradeableConn):
     """
     Interface for a multiplexed connection.
 
@@ -2961,6 +2992,30 @@ class ITransport(ABC):
     Provides methods for dialing peers and creating listeners on a transport.
 
     """
+
+    @property
+    def provides_security(self) -> bool:
+        """
+        Whether this transport provides built-in security (e.g. QUIC has TLS).
+
+        Transports that bundle their own encryption/authentication should
+        override this to return ``True``.  The default is ``False``, which
+        means the upgrade pipeline will apply a separate security handshake
+        (Noise, TLS, etc.) on top of the raw connection.
+        """
+        return False
+
+    @property
+    def provides_muxing(self) -> bool:
+        """
+        Whether this transport provides built-in stream multiplexing.
+
+        Transports that natively multiplex streams (e.g. QUIC, WebRTC)
+        should override this to return ``True``.  The default is ``False``,
+        which means the upgrade pipeline will apply a separate muxer
+        (Yamux, Mplex, etc.) on top of the secure connection.
+        """
+        return False
 
     @abstractmethod
     async def dial(self, maddr: Multiaddr) -> IRawConnection:
