@@ -195,7 +195,7 @@ class ISecureConn(AbstractSecureConn, IRawConnection, IUpgradeableConn):
 # -------------------------- stream_muxer abc.py --------------------------
 
 
-class IMuxedConn(ABC, IUpgradeableConn):
+class IMuxedConn(IUpgradeableConn):
     """
     Interface for a multiplexed connection.
 

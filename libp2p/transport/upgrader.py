@@ -1,7 +1,10 @@
+import logging
+from typing import Union
+
 from libp2p.abc import (
     IMuxedConn,
-    IRawConnection,
     ISecureConn,
+    IUpgradeableConn,
 )
 from libp2p.custom_types import (
     TMuxerOptions,
@@ -31,6 +34,8 @@ from libp2p.transport.exceptions import (
     SecurityUpgradeFailure,
 )
 
+logger = logging.getLogger(__name__)
+
 
 class TransportUpgrader:
     security_multistream: SecurityMultistream
@@ -49,11 +54,23 @@ class TransportUpgrader:
 
     async def upgrade_security(
         self,
-        raw_conn: IRawConnection,
+        raw_conn: IUpgradeableConn,
         is_initiator: bool,
         peer_id: ID | None = None,
-    ) -> ISecureConn:
+    ) -> Union[ISecureConn, IMuxedConn]:
         """Upgrade conn to a secured connection."""
+        if isinstance(raw_conn, IMuxedConn) and raw_conn.provides_security:
+            logger.info(
+                "Raw connection already provides inbuilt security, " \
+                "skipping security upgrade"
+            )
+            return raw_conn
+
+        if isinstance(raw_conn, ISecureConn):
+            logger.info(
+                "Raw connection already provides security, skipping security upgrade"
+            )
+            return raw_conn
         try:
             if is_initiator:
                 if peer_id is None:
@@ -82,6 +99,12 @@ class TransportUpgrader:
 
     async def upgrade_connection(self, conn: ISecureConn, peer_id: ID) -> IMuxedConn:
         """Upgrade secured connection to a muxed connection."""
+        if isinstance(conn, IMuxedConn) and conn.provides_muxing:
+            logger.info(
+                "Connection already provides inbuilt muxing, skipping muxer upgrade"
+            )
+            return conn
+
         try:
             return await self.muxer_multistream.new_conn(conn, peer_id)
         except (MultiselectError, MultiselectClientError) as error:
