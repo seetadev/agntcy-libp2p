@@ -18,7 +18,7 @@ import multiaddr
 from multiaddr import Multiaddr
 import trio
 
-from libp2p.abc import ConnectionType, IMuxedConn, IRawConnection
+from libp2p.abc import ConnectionType, IMuxedConn
 from libp2p.custom_types import TQUICStreamHandlerFn
 from libp2p.peer.id import ID
 from libp2p.rcmgr import Direction
@@ -44,7 +44,7 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 
-class QUICConnection(IRawConnection, IMuxedConn):
+class QUICConnection(IMuxedConn):
     """
     QUIC connection implementing both raw connection and muxed connection interfaces.
 
@@ -264,6 +264,22 @@ class QUICConnection(IRawConnection, IMuxedConn):
             return 0
         else:
             return 1
+
+    """
+    QUIC transport implementation.
+
+    QUIC natively provides both TLS 1.3 security and stream multiplexing,
+    so connections produced by this transport do not need separate security
+    or muxer upgrades.
+    """
+
+    @property
+    def provides_muxing(self):
+        return True
+
+    @property
+    def provides_security(self):
+        return True
 
     @property
     def is_initiator(self) -> bool:  # type: ignore

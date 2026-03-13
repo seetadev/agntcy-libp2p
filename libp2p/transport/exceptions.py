@@ -17,3 +17,6 @@ class SecurityUpgradeFailure(UpgradeFailure):
 
 class MuxerUpgradeFailure(UpgradeFailure):
     pass
+
+class NoSecureUpgradationProtocolFound(UpgradeFailure):
+    pass

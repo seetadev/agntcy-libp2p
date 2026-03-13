@@ -31,6 +31,7 @@ from libp2p.stream_muxer.muxer_multistream import (
 )
 from libp2p.transport.exceptions import (
     MuxerUpgradeFailure,
+    NoSecureUpgradationProtocolFound,
     SecurityUpgradeFailure,
 )
 
@@ -97,14 +98,21 @@ class TransportUpgrader:
                 "handshake failed when upgrading to secure connection"
             ) from error
 
-    async def upgrade_connection(self, conn: ISecureConn, peer_id: ID) -> IMuxedConn:
+    async def upgrade_connection(self, conn: IUpgradeableConn,
+                                  peer_id: ID) -> IMuxedConn:
         """Upgrade secured connection to a muxed connection."""
-        if isinstance(conn, IMuxedConn) and conn.provides_muxing:
+        if isinstance(conn, IMuxedConn) or conn.provides_muxing:
             logger.info(
                 "Connection already provides inbuilt muxing, skipping muxer upgrade"
             )
             return conn
 
+        if not isinstance(conn, ISecureConn) and not conn.provides_security:
+            # If the connection provides neither negotiated nor inbuilt security,
+            # we cannot upgrade it to a muxed connection.
+            raise NoSecureUpgradationProtocolFound(
+                "connection is not secure, cannot upgrade to muxed connection"
+            )
         try:
             return await self.muxer_multistream.new_conn(conn, peer_id)
         except (MultiselectError, MultiselectClientError) as error:
