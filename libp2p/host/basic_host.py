@@ -92,7 +92,6 @@ from libp2p.security.tls.autotls.broker import BrokerClient
 from libp2p.tools.anyio_service import (
     background_trio_service,
 )
-from libp2p.transport.quic.connection import QUICConnection
 from libp2p.utils.multiaddr_utils import (
     join_multiaddrs,
 )
@@ -1043,7 +1042,7 @@ class BasicHost(IHost):
         if not is_initiator:
             # Only the dialer (initiator) needs to actively run identify.
             return
-        if not self._is_quic_muxer(muxed_conn):
+        if not self._supports_native_identify(muxed_conn):
             return
         event_started = getattr(conn, "event_started", None)
         if event_started is not None and not event_started.is_set():
@@ -1065,15 +1064,30 @@ class BasicHost(IHost):
             return connections[0]
         return None
 
-    def _is_quic_muxer(self, muxed_conn: IMuxedConn | None) -> bool:
-        return isinstance(muxed_conn, QUICConnection)
+    def _supports_native_identify(self, muxed_conn: IMuxedConn | None) -> bool:
+        """
+        Return True when the muxed connection advertises native muxing support.
+
+        Primary signal is ``provides_muxing`` from ``IUpgradeableConn``.
+        We keep a fallback check for ``_negotiation_semaphore`` to preserve
+        behavior for existing implementations that haven't surfaced
+        ``provides_muxing`` yet.
+        """
+        if muxed_conn is None:
+            return False
+
+        provides_muxing = bool(getattr(muxed_conn, "provides_muxing", False))
+        if provides_muxing:
+            return True
+
+        return getattr(muxed_conn, "_negotiation_semaphore", None) is not None
 
     def _should_identify_peer(self, peer_id: ID) -> bool:
         connection = self._get_first_connection(peer_id)
         if connection is None:
             return False
         muxed_conn = getattr(connection, "muxed_conn", None)
-        return self._is_quic_muxer(muxed_conn)
+        return self._supports_native_identify(muxed_conn)
 
     # Reference: `BasicHost.newStreamHandler` in Go.
     async def _swarm_stream_handler(self, net_stream: INetStream) -> None:
