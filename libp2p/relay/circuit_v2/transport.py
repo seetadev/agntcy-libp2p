@@ -19,6 +19,7 @@ from libp2p.abc import (
     INetConn,
     INetStream,
     IRawConnection,
+    ISecureConn,
     ITransport,
 )
 from libp2p.connection_types import (
@@ -26,6 +27,9 @@ from libp2p.connection_types import (
 )
 from libp2p.custom_types import (
     THandler,
+)
+from libp2p.protocol_requirements import (
+    requires_connection,
 )
 from libp2p.kad_dht.kad_dht import DHTMode, KadDHT
 from libp2p.network.connection.raw_connection import (
@@ -152,6 +156,7 @@ class TrackedRawConnection(IRawConnection):
         return getattr(self._wrapped, name)
 
 
+@requires_connection(ISecureConn)
 class CircuitV2Transport(ITransport):
     """
     CircuitV2Transport implements the transport interface for Circuit Relay v2.

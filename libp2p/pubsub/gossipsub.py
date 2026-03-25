@@ -20,6 +20,7 @@ import trio
 
 from libp2p.abc import (
     IPubsubRouter,
+    ISecureConn,
 )
 from libp2p.custom_types import (
     MessageID,
@@ -36,6 +37,9 @@ from libp2p.peer.peerstore import (
 )
 from libp2p.pubsub import (
     floodsub,
+)
+from libp2p.protocol_requirements import (
+    requires_connection,
 )
 from libp2p.pubsub.utils import maybe_consume_signed_record
 from libp2p.tools.anyio_service import (
@@ -76,6 +80,7 @@ PROTOCOL_ID_V20 = TProtocol("/meshsub/2.0.0")
 logger = logging.getLogger(__name__)
 
 
+@requires_connection(ISecureConn)
 class GossipSub(IPubsubRouter, Service):
     protocols: list[TProtocol]
     pubsub: Pubsub | None

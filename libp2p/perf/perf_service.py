@@ -18,10 +18,13 @@ from typing import cast
 
 from multiaddr import Multiaddr
 
-from libp2p.abc import IHost, INetStream, IPerf
+from libp2p.abc import IHost, INetStream, IPerf, ISecureConn
 from libp2p.custom_types import TProtocol
 from libp2p.peer.id import ID as PeerID
 from libp2p.peer.peerinfo import PeerInfo
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 
 from .constants import (
     PROTOCOL_NAME,
@@ -32,6 +35,7 @@ from .types import PerfInit, PerfOutput
 logger = logging.getLogger(__name__)
 
 
+@requires_connection(ISecureConn)
 class PerfService(IPerf):
     """
     Implementation of the perf protocol.

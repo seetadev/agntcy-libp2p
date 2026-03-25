@@ -8,9 +8,12 @@ import random
 import trio
 import varint
 
-from libp2p.abc import IHost
+from libp2p.abc import IHost, ISecureConn
 from libp2p.peer.id import ID as PeerID
 from libp2p.peer.peerinfo import PeerInfo
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 
 from .config import (
     DEFAULT_DISCOVER_LIMIT,
@@ -34,6 +37,7 @@ from .pb.rendezvous_pb2 import Message
 logger = logging.getLogger(__name__)
 
 
+@requires_connection(ISecureConn)
 class RendezvousClient:
     """
     Rendezvous client for registering with and discovering peers through

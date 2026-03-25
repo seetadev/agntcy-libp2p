@@ -1,5 +1,8 @@
 import logging
 
+from libp2p.abc import (
+    ISecureConn,
+)
 from libp2p.custom_types import (
     TProtocol,
 )
@@ -22,6 +25,9 @@ from libp2p.peer.id import (
 from libp2p.peer.peerstore import (
     IPeerStore,
 )
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 
 AUTONAT_PROTOCOL_ID = TProtocol("/ipfs/autonat/1.0.0")
 
@@ -43,6 +49,7 @@ class AutoNATStatus:
     PRIVATE = 2
 
 
+@requires_connection(ISecureConn)
 class AutoNATService:
     """
     AutoNAT Service Implementation.

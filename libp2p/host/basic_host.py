@@ -82,6 +82,9 @@ from libp2p.protocol_muxer.multiselect_client import (
 from libp2p.protocol_muxer.multiselect_communicator import (
     MultiselectCommunicator,
 )
+from libp2p.protocol_requirements import (
+    check_connection_requirements,
+)
 from libp2p.rcmgr import ResourceManager
 from libp2p.relay.circuit_v2.nat import is_private_ip
 from libp2p.security.tls.autotls.acme import (
@@ -665,6 +668,17 @@ class BasicHost(IHost):
         if existing_connection is not None:
             existing_muxed_conn = getattr(existing_connection, "muxed_conn", None)
             if existing_muxed_conn is not None:
+                for pid in protocol_ids:
+                    ok, reason = check_connection_requirements(
+                        str(pid), existing_muxed_conn
+                    )
+                    if not ok:
+                        logger.warning(
+                            "Connection requirement not met for protocol %s to peer %s: %s",
+                            pid,
+                            peer_id,
+                            reason,
+                        )
                 semaphore_to_use = getattr(
                     existing_muxed_conn, "_negotiation_semaphore", None
                 )
@@ -1163,6 +1177,19 @@ class BasicHost(IHost):
             )
             await net_stream.reset()
             return
+
+        inbound_muxed_conn = getattr(net_stream, "muxed_conn", None)
+        if inbound_muxed_conn is not None:
+            ok, reason = check_connection_requirements(
+                str(protocol), inbound_muxed_conn
+            )
+            if not ok:
+                logger.warning(
+                    "Inbound stream for protocol %s from peer %s rejected: %s",
+                    protocol,
+                    inbound_muxed_conn.peer_id,
+                    reason,
+                )
 
         await handler(net_stream)
 

@@ -20,6 +20,7 @@ import trio
 
 from libp2p.abc import (
     IHost,
+    ISecureConn,
 )
 from libp2p.custom_types import (
     TProtocol,
@@ -28,6 +29,9 @@ from libp2p.peer.id import (
     ID,
 )
 from libp2p.peer.peerstore import env_to_send_in_RPC
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 from libp2p.tools.anyio_service import (
     Service,
 )
@@ -79,6 +83,7 @@ class RelayInfo:
     reservation_data_limit: int | None = None
 
 
+@requires_connection(ISecureConn)
 class RelayDiscovery(Service):
     """
     Discovery service for Circuit Relay v2 nodes.

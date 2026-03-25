@@ -7,6 +7,7 @@ import trio
 from libp2p.abc import (
     IHost,
     INetStream,
+    ISecureConn,
 )
 from libp2p.custom_types import (
     TProtocol,
@@ -17,6 +18,9 @@ from libp2p.network.stream.exceptions import (
     StreamReset,
 )
 from libp2p.peer.id import ID as PeerID
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 
 ID = TProtocol("/ipfs/ping/1.0.0")
 PING_LENGTH = 32
@@ -91,6 +95,7 @@ async def _ping(stream: INetStream) -> int:
     return rtt
 
 
+@requires_connection(ISecureConn)
 class PingService:
     """PingService executes pings and returns RTT in miliseconds."""
 

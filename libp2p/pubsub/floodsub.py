@@ -9,6 +9,7 @@ import trio
 
 from libp2p.abc import (
     IPubsubRouter,
+    ISecureConn,
 )
 from libp2p.custom_types import (
     TProtocol,
@@ -17,6 +18,9 @@ from libp2p.peer.id import (
     ID,
 )
 from libp2p.peer.peerstore import env_to_send_in_RPC
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 from libp2p.pubsub.utils import maybe_consume_signed_record
 
 from .exceptions import (
@@ -35,6 +39,7 @@ PROTOCOL_ID = TProtocol("/floodsub/1.0.0")
 logger = logging.getLogger(__name__)
 
 
+@requires_connection(ISecureConn)
 class FloodSub(IPubsubRouter):
     mesh: dict[str, set[ID]]
     peer_protocol: dict[ID, TProtocol]

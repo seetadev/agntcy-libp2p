@@ -20,6 +20,7 @@ import varint
 
 from libp2p.abc import (
     IHost,
+    ISecureConn,
 )
 from libp2p.custom_types import TProtocol
 from libp2p.discovery.random_walk.rt_refresh_manager import RTRefreshManager
@@ -35,6 +36,9 @@ from libp2p.peer.peerinfo import (
     PeerInfo,
 )
 from libp2p.peer.peerstore import env_to_send_in_RPC
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 from libp2p.records.pubkey import PublicKeyValidator
 from libp2p.records.validator import NamespacedValidator, Validator
 from libp2p.tools.anyio_service import (
@@ -103,6 +107,7 @@ def is_valid_timestamp(ts: float) -> bool:
     return True
 
 
+@requires_connection(ISecureConn)
 class KadDHT(Service):
     """
     Kademlia DHT implementation for libp2p.

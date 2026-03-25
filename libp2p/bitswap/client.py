@@ -11,10 +11,13 @@ from typing import Any
 import trio
 import varint
 
-from libp2p.abc import IHost, INetStream
+from libp2p.abc import IHost, INetStream, ISecureConn
 from libp2p.custom_types import TProtocol
 from libp2p.network.stream.exceptions import StreamEOF
 from libp2p.peer.id import ID as PeerID
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 
 from .block_store import BlockStore, MemoryBlockStore
 from .cid import (
@@ -47,6 +50,7 @@ from .pb.bitswap_pb2 import Message
 logger = logging.getLogger(__name__)
 
 
+@requires_connection(ISecureConn)
 class BitswapClient:
     """
     Bitswap client for exchanging blocks with other peers.

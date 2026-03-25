@@ -7,8 +7,11 @@ import time
 
 import varint
 
-from libp2p.abc import IHost, INetStream
+from libp2p.abc import IHost, INetStream, ISecureConn
 from libp2p.peer.id import ID as PeerID
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 
 from .config import (
     MAX_DISCOVER_LIMIT,
@@ -53,6 +56,7 @@ class RegistrationRecord:
         return register
 
 
+@requires_connection(ISecureConn)
 class RendezvousService:
     """
     Rendezvous service for hosting a rendezvous point.

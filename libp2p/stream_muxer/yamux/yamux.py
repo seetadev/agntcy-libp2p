@@ -46,6 +46,9 @@ from libp2p.network.connection.exceptions import (
 from libp2p.peer.id import (
     ID,
 )
+from libp2p.protocol_requirements import (
+    after_connection,
+)
 from libp2p.stream_muxer.exceptions import (
     MuxedConnUnavailable,
     MuxedStreamEOF,
@@ -417,6 +420,7 @@ class YamuxStream(IMuxedStream):
             return None
 
 
+@after_connection(ISecureConn)
 class Yamux(IMuxedConn):
     def __init__(
         self,

@@ -24,6 +24,7 @@ from libp2p.abc import (
     INetStream,
     IPubsub,
     IPubsubRouter,
+    ISecureConn,
     ISubscriptionAPI,
 )
 from libp2p.crypto.keys import (
@@ -58,6 +59,9 @@ from libp2p.peer.peerdata import (
     PeerDataError,
 )
 from libp2p.peer.peerstore import env_to_send_in_RPC
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 from libp2p.pubsub.utils import maybe_consume_signed_record
 from libp2p.tools.anyio_service import (
     Service,
@@ -273,6 +277,7 @@ class ValidationCache:
 MAX_CONCURRENT_VALIDATORS = 10
 
 
+@requires_connection(ISecureConn)
 class Pubsub(Service, IPubsub):
     host: IHost
 

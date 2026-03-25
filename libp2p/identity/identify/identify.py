@@ -7,6 +7,7 @@ from multiaddr import (
 from libp2p.abc import (
     IHost,
     INetStream,
+    ISecureConn,
 )
 from libp2p.custom_types import (
     StreamHandlerFn,
@@ -16,6 +17,9 @@ from libp2p.network.stream.exceptions import (
     StreamClosed,
 )
 from libp2p.peer.peerstore import env_to_send_in_RPC
+from libp2p.protocol_requirements import (
+    register_protocol_requirement,
+)
 from libp2p.utils import (
     decode_varint_with_size,
     get_agent_version,
@@ -31,6 +35,8 @@ logger = logging.getLogger(__name__)
 ID = TProtocol("/ipfs/id/1.0.0")
 PROTOCOL_VERSION = "ipfs/0.1.0"
 AGENT_VERSION = get_agent_version()
+
+register_protocol_requirement(str(ID), ISecureConn)
 
 
 def _multiaddr_to_bytes(maddr: Multiaddr) -> bytes:

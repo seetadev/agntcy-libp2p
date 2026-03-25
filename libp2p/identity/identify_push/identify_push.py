@@ -9,6 +9,7 @@ from libp2p.abc import (
     IHost,
     INetStream,
     IPeerStore,
+    ISecureConn,
 )
 from libp2p.crypto.serialization import (
     deserialize_public_key,
@@ -23,6 +24,9 @@ from libp2p.network.stream.exceptions import (
 from libp2p.peer.envelope import consume_envelope
 from libp2p.peer.id import (
     ID,
+)
+from libp2p.protocol_requirements import (
+    register_protocol_requirement,
 )
 from libp2p.utils import (
     get_agent_version,
@@ -46,6 +50,8 @@ ID_PUSH = TProtocol("/ipfs/id/push/1.0.0")
 PROTOCOL_VERSION = "ipfs/0.1.0"
 AGENT_VERSION = get_agent_version()
 CONCURRENCY_LIMIT = 10
+
+register_protocol_requirement(str(ID_PUSH), ISecureConn)
 
 
 def identify_push_handler_for(

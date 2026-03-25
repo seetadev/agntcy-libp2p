@@ -19,6 +19,7 @@ from libp2p.abc import (
     IHost,
     INetConn,
     INetStream,
+    ISecureConn,
 )
 from libp2p.custom_types import (
     TProtocol,
@@ -28,6 +29,9 @@ from libp2p.peer.id import (
 )
 from libp2p.peer.peerinfo import (
     PeerInfo,
+)
+from libp2p.protocol_requirements import (
+    requires_connection,
 )
 from libp2p.relay.circuit_v2.config import (
     DEFAULT_DCUTR_READ_TIMEOUT,
@@ -63,6 +67,7 @@ HOLE_PUNCH_RETRY_DELAY = 30  # seconds
 MAX_OBSERVED_ADDRS = 20
 
 
+@requires_connection(ISecureConn)
 class DCUtRProtocol(Service):
     """
     DCUtRProtocol implements the Direct Connection Upgrade through Relay protocol.

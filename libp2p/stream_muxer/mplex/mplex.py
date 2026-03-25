@@ -32,6 +32,9 @@ from libp2p.network.connection.exceptions import (
 from libp2p.peer.id import (
     ID,
 )
+from libp2p.protocol_requirements import (
+    after_connection,
+)
 from libp2p.utils import (
     decode_uvarint_from_stream,
     encode_uvarint,
@@ -59,6 +62,7 @@ MPLEX_MESSAGE_CHANNEL_SIZE = 8
 logger = logging.getLogger(__name__)
 
 
+@after_connection(ISecureConn)
 class Mplex(IMuxedConn):
     """
     reference: https://github.com/libp2p/go-mplex/blob/master/multiplex.go

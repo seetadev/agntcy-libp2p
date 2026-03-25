@@ -20,6 +20,7 @@ import trio
 from libp2p.abc import (
     IHost,
     INetStream,
+    ISecureConn,
 )
 from libp2p.connection_types import (
     ConnectionType,
@@ -38,6 +39,9 @@ from libp2p.peer.id import (
     ID,
 )
 from libp2p.peer.peerstore import env_to_send_in_RPC
+from libp2p.protocol_requirements import (
+    requires_connection,
+)
 from libp2p.stream_muxer.mplex.exceptions import (
     MplexStreamEOF,
     MplexStreamReset,
@@ -123,6 +127,7 @@ class INetStreamWithExtras(TypingProtocol):
         ...
 
 
+@requires_connection(ISecureConn)
 class CircuitV2Protocol(Service):
     """
     CircuitV2Protocol implements the Circuit Relay v2 protocol.
