@@ -2,7 +2,7 @@
 
 ### Executive Summary
 
-AGNTCY is building a framework for agent-to-agent communication, discovery, coordination, and execution. Based on publicly available architecture discussions, AGNTCY already leverages libp2p for peer discovery, routing, transport abstraction, and communication between distributed agents. However, there is a significant opportunity to evolve the platform from a project-specific implementation into a broader decentralized agent infrastructure that can benefit from mature libp2p, IPLD, CID, and Multiformats capabilities.
+AGNTCY is building a framework for agent-to-agent communication, discovery, coordination, and execution. Based on publicly available architecture discussions, AGNTCY already leverages libp2p for peer discovery, routing, transport abstraction, and communication between distributed agents (please visit the [usage doc](https://docs.google.com/document/d/1ykpzi9d-YHFTu1-VrRgSpUWjlqchHgCxycm6C2iJ2AY/edit?usp=sharing). However, there is a significant opportunity to evolve the platform from a project-specific implementation into a broader decentralized agent infrastructure that can benefit from mature libp2p, IPLD, CID, and Multiformats capabilities.
 
 The objective of this assessment is to identify where AGNTCY currently stands, highlight technical gaps, and propose strategic improvements around identity, scalability, routing, observability, governance, and cost optimization.
 
