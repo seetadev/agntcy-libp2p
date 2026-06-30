@@ -39,71 +39,6 @@ Potential limitations:
 
 ---
 
-### 1.2 Decentralized Identity Implementation
-
-### Current State
-
-Most agent systems today rely on:
-
-* API keys
-* OAuth
-* Centralized registries
-* Vendor-controlled identity systems
-
-This creates:
-
-* Single points of trust
-* Vendor lock-in
-* Identity spoofing risks
-* Difficulty establishing reputation
-
-### Recommended Direction
-
-Leverage libp2p Peer IDs as foundational decentralized identities.
-
-Components:
-
-### Peer Identity Layer
-
-Every agent becomes:
-
-* Cryptographically verifiable
-* Globally unique
-* Self-sovereign
-
-Based on:
-
-* Ed25519
-* Secp256k1
-* Future PQC support
-
-### DID Integration
-
-Map Peer IDs to:
-
-* W3C DIDs
-* Verifiable Credentials
-* Organizational trust frameworks
-
-Example:
-
-```
-did:libp2p:12D3KooW...
-```
-
-### Agent Reputation
-
-Store reputation metadata using IPLD.
-
-Benefits:
-
-* Verifiable trust scores
-* Agent certification
-* Delegated authority
-* Vendor-independent identity
-
----
-
 ### 1.3 GPU Cost Reduction
 
 One of the largest operational expenses for AGNTCY deployments will be inference infrastructure.
@@ -624,6 +559,77 @@ Why was the action taken?
 Can the action be reconstructed?
 
 IPLD is particularly well suited for immutable provenance tracking.
+
+### Decentralized Identity Implementation
+
+### Current State
+
+Most agent systems today rely on:
+
+* API keys
+* OAuth
+* Centralized registries
+* Vendor-controlled identity systems
+
+This creates:
+
+* Single points of trust
+* Vendor lock-in
+* Identity spoofing risks
+* Difficulty establishing reputation
+
+### Recommended Direction
+
+Leverage libp2p Peer IDs as foundational decentralized identities.
+
+Components:
+
+### Peer Identity Layer
+
+Every agent becomes:
+
+* Cryptographically verifiable
+* Globally unique
+* Self-sovereign
+
+Based on:
+
+* Ed25519
+* Secp256k1
+* Future PQC support
+
+### DID Integration
+
+Map Peer IDs to:
+
+* W3C DIDs
+* Verifiable Credentials
+* Organizational trust frameworks
+
+Example:
+
+```
+did:libp2p:12D3KooW...
+```
+
+### Agent Reputation
+
+Store reputation metadata using IPLD.
+
+Benefits:
+
+* Verifiable trust scores
+* Agent certification
+* Delegated authority
+* Vendor-independent identity
+
+---
+
+
+
+
+
+
 
 ---
 
