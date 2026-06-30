@@ -1,4 +1,4 @@
-## AGNTCY × libp2p Deep Dive: Assessment, Gap Analysis, and Strategic Opportunities
+### AGNTCY × libp2p Deep Dive: Assessment, Gap Analysis, and Strategic Opportunities
 
 ## Executive Summary
 
