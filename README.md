@@ -271,58 +271,6 @@ Benefits:
 
 ---
 
-### 2. Consulting Engagement
-
-### Understanding Budget
-
-Key questions:
-
-### Infrastructure Budget
-
-* Annual cloud spend?
-* GPU spend?
-* Networking spend?
-* Storage spend?
-
-### Agent Scale Targets
-
-* Current agent count
-* 12-month projection
-* 24-month projection
-
-### Operational Constraints
-
-* Latency requirements
-* Security requirements
-* Compliance requirements
-
----
-
-### Decision-Making Process
-
-Identify:
-
-### Technical Stakeholders
-
-* AGNTCY architects
-* Cisco engineering leads
-* Platform teams
-
-### Business Stakeholders
-
-* Product leadership
-* Ecosystem leadership
-* Strategic partnerships
-
-### Procurement Stakeholders
-
-* Budget owners
-* Infrastructure owners
-
-Understanding approval paths significantly impacts adoption timelines.
-
----
-
 ### 3. Technical Gap Analysis and Offerings
 
 ### 3.1 Intelligent Routing via Kademlia DHT
