@@ -1,6 +1,6 @@
 ### AGNTCY × libp2p Deep Dive: Assessment, Gap Analysis, and Strategic Opportunities
 
-## Executive Summary
+### Executive Summary
 
 AGNTCY is building a framework for agent-to-agent communication, discovery, coordination, and execution. Based on publicly available architecture discussions, AGNTCY already leverages libp2p for peer discovery, routing, transport abstraction, and communication between distributed agents. However, there is a significant opportunity to evolve the platform from a project-specific implementation into a broader decentralized agent infrastructure that can benefit from mature libp2p, IPLD, CID, and Multiformats capabilities.
 
@@ -8,9 +8,9 @@ The objective of this assessment is to identify where AGNTCY currently stands, h
 
 ---
 
-# 1. AGNTCY Project Assessment
+### 1. AGNTCY Project Assessment
 
-## 1.1 Where the Agency Project Currently Stands
+### 1.1 Where the Agency Project Currently Stands
 
 Current architecture appears focused on:
 
@@ -39,9 +39,9 @@ Potential limitations:
 
 ---
 
-# 1.2 Decentralized Identity Implementation
+### 1.2 Decentralized Identity Implementation
 
-## Current State
+### Current State
 
 Most agent systems today rely on:
 
@@ -57,7 +57,7 @@ This creates:
 * Identity spoofing risks
 * Difficulty establishing reputation
 
-## Recommended Direction
+### Recommended Direction
 
 Leverage libp2p Peer IDs as foundational decentralized identities.
 
@@ -104,11 +104,11 @@ Benefits:
 
 ---
 
-# 1.3 GPU Cost Reduction
+### 1.3 GPU Cost Reduction
 
 One of the largest operational expenses for AGNTCY deployments will be inference infrastructure.
 
-## Existing Challenge
+### Existing Challenge
 
 Current model likely assumes:
 
@@ -124,7 +124,7 @@ Results:
 
 ---
 
-## Proposed Improvements
+### Proposed Improvements
 
 ### Distributed Inference Marketplace
 
@@ -203,9 +203,9 @@ Benefits:
 
 ---
 
-# 1.4 Coordination / Orchestration Layer at Scale
+### 1.4 Coordination / Orchestration Layer at Scale
 
-## Current Challenge
+### Current Challenge
 
 As agent count increases:
 
@@ -215,7 +215,7 @@ As agent count increases:
 
 ---
 
-## Opportunity
+### Opportunity
 
 Build a decentralized orchestration layer using:
 
@@ -271,9 +271,9 @@ Benefits:
 
 ---
 
-# 2. Consulting Engagement
+### 2. Consulting Engagement
 
-## Understanding Budget
+### Understanding Budget
 
 Key questions:
 
@@ -298,7 +298,7 @@ Key questions:
 
 ---
 
-## Decision-Making Process
+### Decision-Making Process
 
 Identify:
 
@@ -323,9 +323,9 @@ Understanding approval paths significantly impacts adoption timelines.
 
 ---
 
-# 3. Technical Gap Analysis and Offerings
+### 3. Technical Gap Analysis and Offerings
 
-## 3.1 Intelligent Routing via Kademlia DHT
+### 3.1 Intelligent Routing via Kademlia DHT
 
 Current usage may focus primarily on discovery.
 
@@ -351,7 +351,7 @@ This is a natural extension of libp2p routing.
 
 ---
 
-## 3.2 Peer Discovery Methods Not Yet Fully Leveraged
+### 3.2 Peer Discovery Methods Not Yet Fully Leveraged
 
 Potential additions:
 
@@ -408,7 +408,7 @@ Benefits:
 
 ---
 
-# 3.3 GossipSub Optimization
+### 3.3 GossipSub Optimization
 
 Current deployments often run default parameters.
 
@@ -466,7 +466,7 @@ Improves scalability.
 
 ---
 
-# 3.4 Signed Peer Identities
+### 3.4 Signed Peer Identities
 
 Potential identity gap:
 
@@ -491,7 +491,7 @@ Benefits:
 
 ---
 
-# 3.5 Pub/Sub Improvements
+### 3.5 Pub/Sub Improvements
 
 Potential enhancements:
 
@@ -535,9 +535,9 @@ Creates reliable event-driven workflows.
 
 ---
 
-# 4. AI & Observability
+### 4. AI & Observability
 
-## 4.1 Observability Stack for Agentic Systems
+### 4.1 Observability Stack for Agentic Systems
 
 One of the largest gaps in multi-agent systems today.
 
@@ -605,11 +605,11 @@ Metrics:
 
 ---
 
-# 4.2 MCP Server
+### 4.2 MCP Server
 
 A major opportunity for AGNTCY.
 
-## Recommended Capabilities
+### Recommended Capabilities
 
 ### Identity-Aware MCP
 
@@ -651,7 +651,7 @@ Support:
 
 ---
 
-# 4.3 AI Governance
+### 4.3 AI Governance
 
 Governance framework should include:
 
@@ -679,7 +679,7 @@ IPLD is particularly well suited for immutable provenance tracking.
 
 ---
 
-# 4.4 Cost Management Components
+### 4.4 Cost Management Components
 
 Recommended FinOps layer:
 
@@ -725,7 +725,7 @@ Across participating organizations.
 
 ---
 
-# 4.5 Security & Compliance
+### 4.5 Security & Compliance
 
 Enterprise adoption requires:
 
@@ -763,6 +763,6 @@ using content-addressed verification through CIDs and IPLD.
 
 ---
 
-# Strategic Opportunity for libp2p
+### Strategic Opportunity for libp2p
 
 The largest opportunity for libp2p is not merely providing networking to AGNTCY. The opportunity is to become the foundational trust, discovery, routing, identity, and interoperability layer for the broader Internet of Agents. AGNTCY already uses libp2p for networking, but deeper adoption of Kademlia DHT, GossipSub, Peer IDs, IPLD, CIDs, Multiformats, Rendezvous, AutoNAT, Circuit Relay, DCUtR, OpenTelemetry integration, and content-addressed provenance could transform the platform from an agent communication framework into a globally scalable decentralized agent infrastructure. This is where the strongest long-term strategic collaboration between AGNTCY, Cisco, and the libp2p ecosystem exists.
