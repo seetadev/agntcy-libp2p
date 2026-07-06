@@ -1,0 +1,120 @@
+{% module headModuleTemplate("Performance Testing",["js/perf.js","js/Chart.Line.js","js/Chart.js","js/Chart.HorizontalBar.js","js/smoothie.js","js/codemirror.js","js/mode-python.js"]) %}
+<body>
+<div class="page-container">
+
+    <!-- top navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Observer</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container" class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+            {% module sideBarModuleTemplate() %}
+
+            <!-- main area -->
+            <div id="main-area" class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+                <h1 class="row" id="section1">Performance Testing</h1>
+
+                <div class="row">
+                    <h3><i style="margin-right:20px" class="fa fa-code" aria-hidden="true"></i>Browser Automation
+                        Scripts</h3>
+
+                    <div class="col-lg-9">
+                        <h4 id="test-name-header">
+                            Custom Test
+                        </h4>
+
+                        <div>
+                            <textarea id="code-input"></textarea>
+                        </div>
+                        <div id="custom-test">
+                            <button id="run-test-btn" type="button" class="btn btn-default" onclick="runCustomTest()"><i
+                                    style="margin-right:20px" class="fa fa-play" aria-hidden="true"></i>RUN
+                            </button>
+                            <div id="instances-count-area">
+                                <i style="margin-right:5px; font-size:1.1em" class="fa fa-clone instances-count-icon" aria-hidden="true" onclick="increaseInstanceCount();"></i>
+                                <div id="instances-count">1</div>
+                            </div>
+                            <input id="test-name-input" type="text" class="form-control"
+                                   placeholder="Enter the test name here..." onsubmit="saveTest()">
+                            <button id="save-test-btn" class="btn btn-default" type="button" onclick="saveTest()"><i
+                                    style="margin-right:20px" class="fa fa-floppy-o" aria-hidden="true"></i>SAVE TEST
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3" id="tests-list">
+                        <ul id="tests-list-group" class="list-group">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row" id="test-live-charts">
+                    <div id="live-chart-container">
+                    </div>
+                </div>
+
+                <div class="row" id="test-results">
+                    <h3><i style="margin-right:20px" class="fa fa-bar-chart-o" aria-hidden="true"></i>Test Results </h3>
+
+                    <div id="bar-chart-wrapper">
+                        <h4 id="test-steps-header">Test Steps</h4>
+                        <div id="steps-list" class="perf-test-chart"></div>
+                    </div>
+
+                    <div id="line-chart-wrapper">
+                        <h4>CPU Profiling</h4>
+                        <canvas id="line-chart-cpu" class="perf-test-chart"></canvas>
+                        <div id="cpu-chart-info"></div>
+                        <h4>RAM Profiling</h4>
+                        <canvas id="line-chart-ram" class="perf-test-chart"></canvas>
+                        <div id="ram-chart-info"></div>
+                        <h4>Disk Profiling</h4>
+                        <canvas id="line-chart-disk" class="perf-test-chart"></canvas>
+                        <div id="disk-chart-info"></div>
+                        <h4>Network Profiling</h4>
+                        <canvas id="line-chart-net" class="perf-test-chart"></canvas>
+                        <div id="net-chart-info"></div>
+                    </div>
+
+                    <h4 id="snapshots-header"><i style="margin-right:20px" class="fa fa-camera" aria-hidden="true"></i>Snapshots</h4>
+
+                    <div id="snapshots-wrapper" class="chart-wrapper">
+
+                    </div>
+
+                    <div id="save-wrapper" class="chart-wrapper">
+                        <h3><i style="margin-right:20px" class="fa fa-floppy-o" aria-hidden="true"></i>Save Test Results
+                        </h3>
+                        <button id="xlsx-save" class="btn btn-default" onclick="saveAs('XLXS');">EVERYTHING AS XLSX
+                        </button>
+                        <button id="csv-save" class="btn btn-default" onclick="saveAs('CSV');">DATA AS CSV</button>
+                    </div>
+
+
+                </div>
+
+                </div>
+                <div id="idle-area" class="col-xs-12 col-sm-9" style="display:none;">
+                    <h2>No machine is currently selected</h2>
+                    <h3>Choose a machine shown in the list on the left side.</h3>
+                </div>
+        </div>
+
+    </div>
+    <!--/.container-->
+</div>
+<!--/.page-container-->
+
+</body>
+</html>

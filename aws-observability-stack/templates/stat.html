@@ -1,0 +1,92 @@
+{% module headModuleTemplate("Statistical Data",["js/stat.js","js/zingchart.min.js"]) %}
+
+<div class="page-container">
+    <!-- top navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Observer</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container" class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+            {% module sideBarModuleTemplate() %}
+
+            <!-- main area -->
+            <div id="main-area" class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+                <h1 id="section1" class="row">Statistical Usage Data</h1>
+                <div class="row">
+                    <h3><i style="margin-right:20px" class="fa fa-server" aria-hidden="true"></i>System Specifications
+                    </h3>
+                    <div id="specs">
+                        <div class="spec-component">MACHINE
+                            <div id="machine" class="spec-value"></div>
+                        </div>
+                        <div class="spec-component">NODE NAME
+                            <div id="node" class="spec-value"></div>
+                        </div>
+                        <div class="spec-component">OPERATING SYSTEM
+                            <div id="system" class="spec-value"></div>
+                        </div>
+                        <div class="spec-component">OS VERSION
+                            <div id="version" class="spec-value"></div>
+                        </div>
+                        <div class="spec-component">PROCESSOR ARCHITECTURE
+                            <div id="proc-arch" class="spec-value"></div>
+                        </div>
+                        <div class="spec-component">STORAGE
+                            <div id="storage" class="spec-value"></div>
+                        </div>
+                        <div class="spec-component">MEMORY
+                            <div id="memory" class="spec-value"></div>
+                        </div>
+                    </div>
+                    <div id="specs-os">
+                    </div>
+                </div>
+                <div id="cpu-stats" class="row">
+                    <h3><i style="margin-right:20px" class="fa fa-building" aria-hidden="true"></i>CPU Usage Stats</h3>
+                    <div id='cpu_chart'></div>
+                    <div id='cpu-chart-info'></div>
+                </div>
+                <div class="row">
+                    <h3><i style="margin-right:20px" class="fa fa-barcode" aria-hidden="true"></i>RAM Usage Stats</h3>
+                    <div id='ram_chart'></div>
+                    <div id='ram-chart-info'></div>
+                </div>
+                <div class="row">
+                    <h3><i style="margin-right:20px" class="fa fa-wifi" aria-hidden="true"></i>Network Usage Stats</h3>
+                    <div id='net_chart'></div>
+                    <div id='net-chart-info'></div>
+                </div>
+                <div class="row">
+                    <h3><i style="margin-right:20px" class="fa fa-hdd-o" aria-hidden="true"></i>Storage Usage Stats</h3>
+                    <div id='storage_chart'></div>
+                    <div id='storage-chart-info'></div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-default" onclick="toggleDisjointGraphs();">Toggle Disjoint Areas</button>
+                </div>
+            </div>
+            <!-- /.col-xs-12 main -->
+            <div id="idle-area" class="col-xs-12 col-sm-9" style="display:none;">
+                <h2>No machine is currently selected</h2>
+
+                <h3>Choose a machine shown in the list on the left side.</h3>
+            </div>
+        </div>
+        <!--/.row-->
+    </div>
+    <!--/.container-->
+</div>
+<!--/.page-container-->
+
+</body>
+</html>

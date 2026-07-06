@@ -1,0 +1,101 @@
+{% module headModuleTemplate("Cost Estimation",["js/cost.js","js/zingchart.min.js"]) %}
+
+<div class="page-container">
+    <!-- top navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Observer</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container" class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+            {% module sideBarModuleTemplate() %}
+
+            <!-- main area -->
+            <div id="main-area" class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+                <h1 id="section1" class="row">Cost Estimation</h1>
+                <div class="row">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="instance-type-list"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <div id="current-instance-type">Choose Instance Type</div>
+                            <span class="caret"></span>
+                        </button>
+                        <ul id="instance-type-dropdown-menu" class="dropdown-menu" aria-labelledby="instance-type-list">
+                        </ul>
+                    </div>
+                    <div id="current-instance-type-details"></div>
+                </div>
+                <div class="row">
+                    <h2>Utilization</h2>
+                    <div><div id="usage-perc"></div></div>
+                </div>
+                <div class="row">
+                    <div style="margin-bottom: 10px;">Estimation Duration (in days): </div>
+                    <div class="input-group">
+                        <input id="days-duration-input" type="text" class="form-control"
+                               placeholder="Days">
+                        <button id="set-duration-btn" class="btn btn-default" type="button" onclick="setEstimationDuration();">Set Duration
+                        </button>
+                    </div>
+
+                    <div id="cpu-stats" class="row">
+                        <h3>CPU Demand Curve</h3>
+                        <div id='cpu_chart'></div>
+                        <div id='cpu-chart-info'></div>
+                        <div id="cpu_demand_stats" class="demand-stats"></div>
+                    </div>
+                    <div class="row">
+                        <h3>RAM Demand Curve</h3>
+                        <div id='ram_chart'></div>
+                        <div id='ram-chart-info'></div>
+                        <div id="ram_demand_stats" class="demand-stats"></div>
+                    </div>
+                    <div class="row">
+                        <h3>Network Demand Curve</h3>
+                        <div id='net_chart'></div>
+                        <div id='net-chart-info'></div>
+                        <div id="net_demand_stats" class="demand-stats"></div>
+                    </div>
+                    <div class="row" style="display: none">
+                        <h3>Storage Demand Curve</h3>
+                        <div id='storage_chart'></div>
+                        <div id='storage-chart-info' class="demand-stats"></div>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-default" onclick="toggleDisjointGraphs();">Toggle Disjoint Areas</button>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <h2><i style="margin-right:20px" class="fa fa-credit-card" aria-hidden="true"></i>Total Cost</h2>
+                    <button id="compute-cost-btn" onclick="computeCost()" class="btn btn-default">Compute Cost</button>
+                    <h4 id="instance-reservation-cost"></h4>
+                    <h4 id="bandwidth-data-cost"></h4>
+                    <h3 id="monthly-cost"></h3>
+                    <h3 id="yearly-cost"></h3>
+                </div>
+            </div>
+            <!-- /.col-xs-12 main -->
+            <div id="idle-area" class="col-xs-12 col-sm-9" style="display:none;">
+                <h2>No machine is currently selected</h2>
+
+                <h3>Choose a machine shown in the list on the left side.</h3>
+            </div>
+        </div>
+        <!--/.row-->
+    </div>
+    <!--/.container-->
+</div>
+<!--/.page-container-->
+
+</body>
+</html>
