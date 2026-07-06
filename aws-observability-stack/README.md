@@ -1,4 +1,4 @@
-# observer-monitoring
+# AWS Observability Stack at the application level with agntcy x libp2p
 A monitoring tool for checking the status of local/remote servers, based on <a href="https://github.com/giampaolo/psutil">psutil</a>, <a href="https://github.com/tornadoweb/tornado">Tornado</a> and <a href="https://github.com/mongodb/mongo">MongoDB</a>.
 
 ## How-to-run:
