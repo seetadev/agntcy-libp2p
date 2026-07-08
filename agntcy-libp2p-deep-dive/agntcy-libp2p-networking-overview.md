@@ -1,10 +1,10 @@
-# **AGNTCY × libp2p: Networking Foundations and Collaboration Opportunities**
+### **AGNTCY × libp2p: Networking Foundations and Collaboration Opportunities**
 
 > *A collaborative overview of how AGNTCY currently leverages libp2p, and areas where the libp2p community can contribute to future interoperability, observability, and networking research.*
 
 ---
 
-## Introduction
+### Introduction
 
 As members of the libp2p community, we have been exploring how AGNTCY's networking architecture is built and where there are opportunities for deeper collaboration.
 
@@ -14,7 +14,7 @@ Rather than viewing libp2p as simply another dependency, we see it as one of the
 
 ---
 
-# Why libp2p?
+### Why libp2p?
 
 Building distributed systems requires solving a number of difficult networking problems:
 
@@ -33,7 +33,7 @@ For AGNTCY, this means the project can focus on agent discovery, identity, and p
 
 ---
 
-# Our Understanding of the Current Architecture
+### Our Understanding of the Current Architecture
 
 Based on the current implementation, AGNTCY's Directory (DIR) service uses libp2p across several networking layers.
 
@@ -76,11 +76,11 @@ The implementation combines several libp2p components:
 
 ---
 
-# Key Areas Where libp2p Is Used
+### Key Areas Where libp2p Is Used
 
 Our review identified libp2p usage throughout the networking stack.
 
-## Peer Identity
+### Peer Identity
 
 Every DIR node becomes a libp2p peer with
 
@@ -91,7 +91,7 @@ Every DIR node becomes a libp2p peer with
 
 ---
 
-## Distributed Discovery
+### Distributed Discovery
 
 Kad-DHT provides
 
@@ -104,7 +104,7 @@ This allows agent metadata to be discovered without requiring centralized lookup
 
 ---
 
-## Metadata Retrieval
+### Metadata Retrieval
 
 Once a peer has been discovered through the DHT,
 
@@ -118,7 +118,7 @@ This separates discovery from metadata transfer, reducing unnecessary DHT traffi
 
 ---
 
-## Event Distribution
+### Event Distribution
 
 GossipSub is used to announce newly published records across participating peers.
 
@@ -126,7 +126,7 @@ This allows newly available agent information to propagate quickly throughout th
 
 ---
 
-## Content Addressing
+### Content Addressing
 
 AGNTCY uses IPFS Content Identifiers (CIDs) as immutable references for agent records.
 
@@ -134,7 +134,7 @@ Rather than storing metadata directly inside the DHT, the DHT advertises provide
 
 ---
 
-# End-to-End Discovery Flow
+### End-to-End Discovery Flow
 
 A simplified view of the discovery pipeline looks like:
 
@@ -167,7 +167,7 @@ This architecture keeps networking responsibilities clearly separated while leve
 
 ---
 
-# Collaboration Opportunities
+### Collaboration Opportunities
 
 As maintainers and contributors within the libp2p ecosystem, we believe there are several exciting opportunities for collaboration.
 
@@ -175,7 +175,7 @@ These are intended as discussion topics rather than proposals.
 
 ---
 
-## Network Observability
+### Network Observability
 
 Large peer-to-peer systems are often difficult to operate without visibility into network behavior.
 
@@ -194,7 +194,7 @@ Better networking observability would benefit both AGNTCY operators and libp2p d
 
 ---
 
-## Application-Level Observability
+### Application-Level Observability
 
 Beyond networking itself, distributed agent systems introduce higher-level operational questions.
 
@@ -212,7 +212,7 @@ This complements existing networking metrics with application-level insights.
 
 ---
 
-## Agent Ecosystem Interoperability
+### Agent Ecosystem Interoperability
 
 The broader AI ecosystem is rapidly evolving around multiple protocol families.
 
@@ -229,7 +229,7 @@ libp2p could continue serving as a common networking substrate beneath these pro
 
 ---
 
-## Hybrid Networking Models
+### Hybrid Networking Models
 
 One particularly interesting research direction is combining
 
@@ -243,7 +243,7 @@ Hybrid deployments may help organizations adopt decentralized networking increme
 
 ---
 
-## Routing Research
+### Routing Research
 
 Future experimentation may include
 
@@ -258,7 +258,7 @@ These ideas build naturally on existing libp2p routing primitives.
 
 ---
 
-## Discoverability
+### Discoverability
 
 Beyond discovering peers, future work could explore discovering
 
@@ -273,7 +273,7 @@ This represents an evolution from peer discovery toward richer agent discovery.
 
 ---
 
-# Why This Matters
+### Why This Matters
 
 Distributed AI systems increasingly require
 
@@ -290,7 +290,7 @@ By building upon established networking protocols, AGNTCY can focus its innovati
 
 ---
 
-# Looking Ahead
+### Looking Ahead
 
 We are excited to continue collaborating with the AGNTCY community and exploring opportunities around
 
@@ -306,7 +306,7 @@ We are excited to continue collaborating with the AGNTCY community and exploring
 
 We hope this document serves as a useful starting point for future discussions and contributions.
 
----
+
 
 ## Acknowledgements
 
