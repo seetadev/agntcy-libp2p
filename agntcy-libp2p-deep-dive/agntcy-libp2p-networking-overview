@@ -1,0 +1,314 @@
+# **AGNTCY × libp2p: Networking Foundations and Collaboration Opportunities**
+
+> *A collaborative overview of how AGNTCY currently leverages libp2p, and areas where the libp2p community can contribute to future interoperability, observability, and networking research.*
+
+---
+
+## Introduction
+
+As members of the libp2p community, we have been exploring how AGNTCY's networking architecture is built and where there are opportunities for deeper collaboration.
+
+This document summarizes our understanding of the current implementation based on the AGNTCY source code and documentation. It is intended as a technical and community resource, and we welcome corrections, suggestions, and discussion from both the AGNTCY and libp2p communities.
+
+Rather than viewing libp2p as simply another dependency, we see it as one of the foundational networking layers enabling AGNTCY's decentralized architecture.
+
+---
+
+# Why libp2p?
+
+Building distributed systems requires solving a number of difficult networking problems:
+
+* Secure peer authentication
+* Peer discovery
+* Routing
+* NAT traversal
+* Connection management
+* Reliable messaging
+* Transport negotiation
+* Resource management
+
+libp2p provides these as reusable building blocks, allowing applications to focus on higher-level protocols instead of implementing networking primitives from scratch.
+
+For AGNTCY, this means the project can focus on agent discovery, identity, and protocol interoperability while relying on a mature networking stack underneath.
+
+---
+
+# Our Understanding of the Current Architecture
+
+Based on the current implementation, AGNTCY's Directory (DIR) service uses libp2p across several networking layers.
+
+```text
+                   Agent Directory
+
+                 Agent Metadata
+                       │
+                       ▼
+                  Content Addressing
+                     (IPFS CID)
+                       │
+                       ▼
+               libp2p Kad-DHT Advertisement
+                       │
+                       ▼
+                Provider Discovery
+                       │
+                       ▼
+                Peer Discovery
+                       │
+                       ▼
+                libp2p RPC Retrieval
+                       │
+                       ▼
+                Agent Communication
+```
+
+The implementation combines several libp2p components:
+
+| Component      | Purpose                                 |
+| -------------- | --------------------------------------- |
+| libp2p Host    | Peer identity and secure networking     |
+| Kad-DHT        | Distributed peer and provider discovery |
+| GossipSub      | Announcement propagation                |
+| RPC            | Metadata retrieval between peers        |
+| Peer IDs       | Cryptographic node identity             |
+| Multiaddresses | Reachable network addresses             |
+| IPFS CID       | Immutable content identifiers           |
+
+---
+
+# Key Areas Where libp2p Is Used
+
+Our review identified libp2p usage throughout the networking stack.
+
+## Peer Identity
+
+Every DIR node becomes a libp2p peer with
+
+* cryptographic identity
+* peer ID
+* transport configuration
+* multiaddresses
+
+---
+
+## Distributed Discovery
+
+Kad-DHT provides
+
+* provider advertisements
+* peer routing
+* content routing
+* decentralized discovery
+
+This allows agent metadata to be discovered without requiring centralized lookup services.
+
+---
+
+## Metadata Retrieval
+
+Once a peer has been discovered through the DHT,
+
+libp2p RPC is used to retrieve
+
+* labels
+* metadata
+* routing information
+
+This separates discovery from metadata transfer, reducing unnecessary DHT traffic.
+
+---
+
+## Event Distribution
+
+GossipSub is used to announce newly published records across participating peers.
+
+This allows newly available agent information to propagate quickly throughout the network.
+
+---
+
+## Content Addressing
+
+AGNTCY uses IPFS Content Identifiers (CIDs) as immutable references for agent records.
+
+Rather than storing metadata directly inside the DHT, the DHT advertises providers for CID-addressed content.
+
+---
+
+# End-to-End Discovery Flow
+
+A simplified view of the discovery pipeline looks like:
+
+```text
+OCI Registry
+      │
+      ▼
+Artifact
+      │
+      ▼
+CID
+      │
+      ▼
+libp2p Kad-DHT
+      │
+      ▼
+Provider Discovery
+      │
+      ▼
+Peer Discovery
+      │
+      ▼
+libp2p RPC
+      │
+      ▼
+Metadata Retrieval
+```
+
+This architecture keeps networking responsibilities clearly separated while leveraging existing libp2p protocols.
+
+---
+
+# Collaboration Opportunities
+
+As maintainers and contributors within the libp2p ecosystem, we believe there are several exciting opportunities for collaboration.
+
+These are intended as discussion topics rather than proposals.
+
+---
+
+## Network Observability
+
+Large peer-to-peer systems are often difficult to operate without visibility into network behavior.
+
+Potential collaboration areas include:
+
+* DHT lookup latency
+* connection establishment
+* relay utilization
+* NAT traversal diagnostics
+* transport negotiation
+* peer churn
+* routing visualization
+* resource management
+
+Better networking observability would benefit both AGNTCY operators and libp2p developers.
+
+---
+
+## Application-Level Observability
+
+Beyond networking itself, distributed agent systems introduce higher-level operational questions.
+
+Possible areas include:
+
+* agent discovery latency
+* RPC performance
+* publication propagation
+* federation health
+* CID resolution
+* request tracing
+* service availability
+
+This complements existing networking metrics with application-level insights.
+
+---
+
+## Agent Ecosystem Interoperability
+
+The broader AI ecosystem is rapidly evolving around multiple protocol families.
+
+Examples include:
+
+* SLIM
+* Model Context Protocol (MCP)
+* Agent-to-Agent (A2A)
+* OpenTelemetry
+* AGNTCY Identity
+* emerging agent communication protocols
+
+libp2p could continue serving as a common networking substrate beneath these protocols rather than requiring each ecosystem to implement its own networking layer.
+
+---
+
+## Hybrid Networking Models
+
+One particularly interesting research direction is combining
+
+* centralized services
+* decentralized discovery
+* secure peer identities
+* enterprise deployments
+* public peer-to-peer infrastructure
+
+Hybrid deployments may help organizations adopt decentralized networking incrementally while maintaining operational requirements.
+
+---
+
+## Routing Research
+
+Future experimentation may include
+
+* capability-aware routing
+* semantic discovery
+* trust-aware routing
+* locality-aware peer selection
+* enterprise federation
+* adaptive routing algorithms
+
+These ideas build naturally on existing libp2p routing primitives.
+
+---
+
+## Discoverability
+
+Beyond discovering peers, future work could explore discovering
+
+* capabilities
+* skills
+* services
+* APIs
+* tools
+* models
+
+This represents an evolution from peer discovery toward richer agent discovery.
+
+---
+
+# Why This Matters
+
+Distributed AI systems increasingly require
+
+* secure identities
+* scalable networking
+* decentralized discovery
+* interoperability
+* resilience
+* federation
+
+These challenges closely align with the problems libp2p has been solving across distributed systems for many years.
+
+By building upon established networking protocols, AGNTCY can focus its innovation on the agent layer while benefiting from ongoing improvements across the broader libp2p ecosystem.
+
+---
+
+# Looking Ahead
+
+We are excited to continue collaborating with the AGNTCY community and exploring opportunities around
+
+* networking interoperability
+* developer tooling
+* observability
+* testing infrastructure
+* performance analysis
+* routing research
+* decentralized identity
+* secure messaging
+* production operations
+
+We hope this document serves as a useful starting point for future discussions and contributions.
+
+
+## Acknowledgements
+
+This overview is based on AGNTCY's publicly available source code and documentation. Many thanks to Sujata and the AGNTCY contributors for building in the open and making it possible for the broader community to learn from and contribute to the project.
+
+We welcome feedback, corrections, and additional insights from both the AGNTCY and libp2p communities.
