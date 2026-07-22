@@ -99,7 +99,7 @@ using independent protocol identifiers.
 
 ---
 
-# AGNTCY Protocol Prefix
+### AGNTCY Protocol Prefix
 
 Instead of
 
@@ -126,7 +126,7 @@ This prevents accidental participation in the public IPFS DHT while enabling mul
 
 ---
 
-# Enterprise Routing Policy
+### Enterprise Routing Policy
 
 Before any lookup continues:
 
@@ -154,7 +154,7 @@ before querying another peer.
 
 ---
 
-# Agent Capability Records
+### Agent Capability Records
 
 Rather than storing only peer IDs, AGNTCY introduces **Capability Records** describing the services an agent offers.
 
@@ -179,7 +179,7 @@ Applications may choose how much metadata to expose, minimizing information disc
 
 ---
 
-# Organizational Trust Domains
+### Organizational Trust Domains
 
 Nodes belong to one or more trust domains:
 
@@ -207,7 +207,7 @@ Public → Internal ✗
 
 ---
 
-# Routing Table Admission
+### Routing Table Admission
 
 Unlike public Kad-DHTs, enterprise deployments SHOULD NOT admit every reachable peer.
 
@@ -225,7 +225,7 @@ This aligns naturally with libp2p's routing table filtering mechanisms while int
 
 ---
 
-# Query Peer Filters
+### Query Peer Filters
 
 Every lookup SHOULD support policy-aware peer selection.
 
@@ -242,7 +242,7 @@ Distance remains important but is not the sole criterion.
 
 ---
 
-# Private Metadata
+### Private Metadata
 
 The DHT SHOULD avoid exposing sensitive information such as:
 
@@ -257,7 +257,7 @@ Only the minimum metadata required for discovery should be published.
 
 ---
 
-# Gateway Federation
+### Gateway Federation
 
 Enterprise gateways synchronize selected records between trust domains.
 
@@ -275,7 +275,7 @@ Gateways enforce export policies and prevent accidental leakage of internal info
 
 ---
 
-# Suggested Parameter Profile
+### Suggested Parameter Profile
 
 | Parameter            | Recommendation                               |
 | -------------------- | -------------------------------------------- |
@@ -296,7 +296,7 @@ These recommendations build upon the operational guidance for libp2p Kademlia wh
 
 ---
 
-# Security Considerations
+### Security Considerations
 
 AGNTCY deployments SHOULD additionally support:
 
