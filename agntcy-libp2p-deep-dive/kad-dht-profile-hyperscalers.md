@@ -1,6 +1,6 @@
 ### AGNTCY Kademlia DHT Profile on HyperScalers
 
-### Enterprise Agent Routing over libp2p (tested on AWS)
+### Enterprise Agent Routing over libp2p
 
 ### Status
 
