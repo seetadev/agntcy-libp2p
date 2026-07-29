@@ -1,7 +1,7 @@
 
-# Proposal: Upgrade AGNTCY Networking Stack to go-libp2p v0.49.0
+### Proposal: Upgrade AGNTCY Networking Stack to go-libp2p v0.49.0
 
-## Background
+### Background
 
 The **go-libp2p v0.49.0** release introduces a collection of networking, transport, security, NAT traversal, and peer management improvements that align well with AGNTCY's vision of building a secure, scalable, and interoperable networking layer for distributed AI agents.
 
@@ -25,7 +25,7 @@ Given the growing complexity of AGNTCY deployments, I believe it is worth discus
 
 ---
 
-# Why This Matters for AGNTCY
+### Why This Matters for AGNTCY
 
 AGNTCY's networking layer is expected to support:
 
@@ -45,11 +45,11 @@ This release contains multiple improvements across networking reliability, peer 
 
 ---
 
-# Detailed Review of Changes
+### Detailed Review of Changes
 
 ---
 
-# 1. Relay Backoff Logic
+### 1. Relay Backoff Logic
 
 ### Release Note
 
@@ -66,7 +66,7 @@ As a consequence:
 * additional relay discovery traffic was generated
 * connection establishment latency increased
 
-## Why This Matters
+### Why This Matters
 
 Circuit Relay v2 remains one of the most important mechanisms for nodes located behind restrictive NATs.
 
@@ -87,13 +87,13 @@ Removing unnecessary relay backoff improves connection stability while reducing 
 
 ---
 
-# 2. NonPublicAddrPublishing
+### 2. NonPublicAddrPublishing
 
 ### New Feature
 
 Applications may now explicitly avoid publishing private addresses.
 
-## Why It Matters
+### Why It Matters
 
 Many enterprise deployments expose addresses that are never routable outside the local network:
 
@@ -105,14 +105,14 @@ Many enterprise deployments expose addresses that are never routable outside the
 
 Publishing these addresses provides little value while increasing DHT noise and revealing unnecessary topology information.
 
-## Benefits
+### Benefits
 
 * improved privacy
 * smaller routing tables
 * cleaner peer advertisements
 * reduced DHT pollution
 
-## Discussion
+### Discussion
 
 Should AGNTCY enable this behaviour by default for enterprise deployments?
 
@@ -120,7 +120,7 @@ Would deployment profiles (cloud vs enterprise vs local development) make sense?
 
 ---
 
-# 3. Routing Query Race Conditions
+### 3. Routing Query Race Conditions
 
 Concurrent routing queries previously had the possibility of publishing events in inconsistent order.
 
@@ -141,7 +141,7 @@ Potential benefit:
 
 ---
 
-# 4. Peer Record Cleanup
+### 4. Peer Record Cleanup
 
 Empty addresses are no longer accepted inside peer records.
 
@@ -156,7 +156,7 @@ Benefits include:
 
 ---
 
-# 5. Automatic Replacement of Stale Peer Records
+### 5. Automatic Replacement of Stale Peer Records
 
 Signed peer records now automatically replace stale address information.
 
@@ -180,7 +180,7 @@ Automatically refreshing address information should improve connection success r
 
 ---
 
-# 6. Capping Unconnected Addresses
+### 6. Capping Unconnected Addresses
 
 The peerstore now limits the number of disconnected addresses retained per peer.
 
@@ -202,7 +202,7 @@ This is particularly relevant for:
 
 ---
 
-# 7. Cleaner Logging
+### 7. Cleaner Logging
 
 Dependency Injection registration events are now emitted only at debug level.
 
@@ -217,7 +217,7 @@ Small quality-of-life improvement with operational benefits.
 
 ---
 
-# 8. Improved WebSocket Shutdown
+### 8. Improved WebSocket Shutdown
 
 WebSocket reads now terminate immediately during shutdown.
 
@@ -232,7 +232,7 @@ Worth validating in AGNTCY container deployments.
 
 ---
 
-# 9. WebRTC Address Limits
+### 9. WebRTC Address Limits
 
 Remote addresses are now capped per ufrag.
 
@@ -247,7 +247,7 @@ This becomes increasingly relevant as browser-native agents are introduced.
 
 ---
 
-# 10. QUIC TLS Configuration
+### 10. QUIC TLS Configuration
 
 One of the most significant additions in this release.
 
@@ -272,7 +272,7 @@ Can we standardize certificate management across transports?
 
 ---
 
-# 11. Identify Protocol Limits
+### 11. Identify Protocol Limits
 
 Peers may no longer advertise unlimited protocol lists.
 
@@ -287,7 +287,7 @@ Good security hardening for public networks.
 
 ---
 
-# 12. Hole Punch Deadlock
+### 12. Hole Punch Deadlock
 
 Deadlocks during cancelled address discovery have been resolved.
 
@@ -304,7 +304,7 @@ This is especially relevant because NAT traversal has been an active discussion 
 
 ---
 
-# 13. Swarm Event Refactoring
+### 13. Swarm Event Refactoring
 
 Connection callbacks now flow through the event emitter.
 
@@ -334,7 +334,7 @@ Adds flexibility without changing default behaviour.
 
 ---
 
-# 15. Shared HTTP / WebSocket Ports
+### 15. Shared HTTP / WebSocket Ports
 
 HTTP handlers and WebSocket transport may now share a single port.
 
@@ -349,7 +349,7 @@ Potentially reduces operational overhead for hosted AgentMesh deployments.
 
 ---
 
-# 16. HTTP Authentication Cleanup
+### 16. HTTP Authentication Cleanup
 
 Intermediate authentication responses are now properly closed.
 
@@ -377,7 +377,7 @@ Useful for persistent browser-based agents.
 
 ---
 
-# 18. WebRTC Direct v2
+### 18. WebRTC Direct v2
 
 Support has been added for WebRTC Direct v2.
 
@@ -394,7 +394,7 @@ Would be valuable to validate against AGNTCY browser SDKs.
 
 ---
 
-# 19. EventBus and WebTransport Concurrency
+### 19. EventBus and WebTransport Concurrency
 
 Several concurrency issues have been resolved.
 
@@ -498,7 +498,7 @@ Before upgrading production deployments, I suggest validating:
 
 ---
 
-# Discussion Questions
+### Discussion Questions
 
 1. Should AGNTCY target **go-libp2p v0.49.0** as the new baseline for upcoming releases?
 
