@@ -1,6 +1,6 @@
-# AGNTCY Directory Transport Seam: Roadmap, NAT Traversal, and Integration
+### AGNTCY Directory Transport Seam: Roadmap, NAT Traversal, and Integration
 
-## Overview
+### Overview
 
 The `gostream-test` repository provides a useful and timely proof of concept for the **Transport seam** proposed as part of the AGNTCY Directory redesign.
 
@@ -38,7 +38,7 @@ This is a strong foundation for taking AGNTCY from local development and demos t
 
 ---
 
-## Why the Transport Seam Matters
+### Why the Transport Seam Matters
 
 The transport abstraction allows us to separate:
 
@@ -73,11 +73,11 @@ This becomes particularly important for the Internet of Agents, where an agent c
 
 ---
 
-# Proposed Roadmap
+### Proposed Roadmap
 
 I would suggest developing this incrementally, with small, independently reviewable PRs.
 
-## Milestone 1 — Transport Seam Validation
+### Milestone 1 — Transport Seam Validation
 
 ### Goals
 
@@ -105,7 +105,7 @@ DirService
 
 ---
 
-# Milestone 2 — Production libp2p Transport
+### Milestone 2 — Production libp2p Transport
 
 The next phase should harden the libp2p implementation for real deployments.
 
@@ -128,7 +128,7 @@ The goal is to move from a runnable proof of concept toward a reusable AGNTCY tr
 
 ---
 
-# Milestone 3 — NAT Traversal and Edge Connectivity
+### Milestone 3 — NAT Traversal and Edge Connectivity
 
 This should be a major milestone rather than an implementation detail.
 
@@ -178,7 +178,7 @@ The proposed team-server architecture is a natural fit for this model: public in
 
 ---
 
-# CGNAT and Mobile VPN Test Matrix
+### CGNAT and Mobile VPN Test Matrix
 
 A dedicated NAT traversal test matrix would be valuable.
 
@@ -201,7 +201,7 @@ The key success criterion is:
 
 ---
 
-# Milestone 4 — Directory Federation
+### Milestone 4 — Directory Federation
 
 Once the transport layer is reliable, we can build toward federation:
 
@@ -229,7 +229,7 @@ The transport layer should allow these components to communicate without couplin
 
 ---
 
-# Milestone 5 — Customer and Application Validation
+### Milestone 5 — Customer and Application Validation
 
 The architecture should be validated against real AGNTCY applications rather than only synthetic transport demos.
 
@@ -238,7 +238,7 @@ Two useful perspectives are:
 * **Spellguard.ai** — a customer-oriented deployment perspective.
 * **coffee-sdk-app** — a developer/application integration perspective.
 
-## Spellguard.ai
+### Spellguard.ai
 
 For a customer such as Spellguard.ai, we should consider realistic deployment environments:
 
@@ -268,7 +268,7 @@ Authenticated peer
 
 while preserving the same Directory API.
 
-## coffee-sdk-app
+### coffee-sdk-app
 
 The `coffee-sdk-app` demo provides an important developer-experience test.
 
@@ -288,9 +288,9 @@ This makes the Transport seam a genuine developer-experience improvement rather 
 
 ---
 
-# Proposed PR Strategy
+### Proposed Development and Testing Strategy
 
-I would like to contribute **incremental PRs** around this initiative as the design develops.
+We would like to contribute **incremental PRs** around this initiative as the design develops.
 
 Rather than introducing one large implementation PR, I suggest keeping the work modular and reviewable.
 
@@ -346,7 +346,7 @@ This incremental approach should allow architectural assumptions to be reviewed 
 
 ---
 
-# Tailscale, WireGuard and Overlay Networks
+### Tailscale, WireGuard and Overlay Networks
 
 The `tsnet` exploration is also interesting.
 
@@ -406,7 +406,7 @@ Again, the important property is that the **AGNTCY application does not need to 
 
 ---
 
-# Observability
+### Observability
 
 Another important future area is making the Transport seam observable.
 
@@ -480,7 +480,7 @@ into a single end-to-end trace.
 
 ---
 
-# Proposed Success Criteria
+### Proposed Success Criteria
 
 I suggest measuring the initiative against concrete outcomes.
 
@@ -528,7 +528,7 @@ I suggest measuring the initiative against concrete outcomes.
 
 ---
 
-# Longer-Term Direction
+### Longer-Term Direction
 
 The Transport seam could eventually become more than an implementation detail.
 
@@ -571,7 +571,7 @@ It could provide the foundation for:
 
 ---
 
-# Review and Collaboration
+### Review and Collaboration
 
 I would suggest an iterative process for this initiative:
 
@@ -609,7 +609,7 @@ I would be happy to contribute PRs and participate in reviews, particularly arou
 
 ---
 
-# Conclusion
+### Conclusion
 
 The combination of the **Transport seam + libp2p + NAT traversal + federation + observability** can provide AGNTCY with a strong networking foundation for both current demos and real customer deployments.
 
@@ -623,4 +623,4 @@ I would be happy to **share PRs incrementally, help define and refine the milest
 
 The goal should be a transport layer that is **simple for application developers, robust for enterprise and edge deployments, and genuinely P2P when the environment allows it**.
 
-Excited about this direction and looking forward to developing it further. 🚀
+Excited about this direction and looking forward to developing it further.
