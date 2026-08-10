@@ -1,8 +1,8 @@
-### AGNTCY Contributor Profile — Johanna Moran and Manu Sheel Gupta
+### AGNTCY Contributors Profile — Johanna Moran and Manu Sheel Gupta
 
-Github: https://github.com/seetadev
+Technical Contributions via Github and WG meetings: Manu Sheel Gupta (Github: https://github.com/seetadev)
 
-## 1. Please tell us a bit more about your background.
+### 1. Please tell us a bit more about your background.
 
 Manu: My background is in distributed systems, open-source networking, and decentralized infrastructure. I've spent much of my work around **libp2p, IPFS, IPNS, IPLD, and Multiformats**, with a particular focus on peer-to-peer communication, distributed discovery, content addressing, identity, and building resilient infrastructure for the open Internet.
 
@@ -14,7 +14,7 @@ That perspective naturally led me toward AGNTCY. Agent systems are introducing a
 
 ---
 
-# 2. What led you to AGNTCY?
+### 2. What led you to AGNTCY?
 
 What initially attracted me to AGNTCY was that it wasn't approaching agents simply as an application-layer problem.
 
@@ -30,7 +30,7 @@ I didn't come to AGNTCY thinking, "I need to find an agent platform." I came to 
 
 ---
 
-# 3. Did you have a business problem in mind when you first started looking into AGNTCY?
+### 3. Did you have a business problem in mind when you first started looking into AGNTCY?
 
 For me, it was less of a traditional business problem and more of a **systems and ecosystem problem**.
 
@@ -48,7 +48,7 @@ So the opportunity I saw was to help make the **networking layer underneath agen
 
 ---
 
-# 4. Please tell us a bit more about this issue.
+### 4. Please tell us a bit more about this issue.
 
 The Internet has historically solved many of these problems through centralized infrastructure.
 
@@ -102,7 +102,7 @@ Those questions are where I think AGNTCY and the libp2p community can do some pa
 
 ---
 
-# 5. Where are you in the process of applying AGNTCY — trial, POC, deployment?
+### 5. Where are you in the process of applying AGNTCY — trial, POC, deployment?
 
 I'd describe my involvement as **active technical exploration, contribution and ecosystem collaboration**, rather than positioning it as a production deployment of a commercial AGNTCY application.
 
@@ -120,7 +120,7 @@ So I see my involvement as sitting at the intersection of **contributing to AGNT
 
 ---
 
-# 6. What do you hope to achieve with AGNTCY? Have you seen any tangible payoff yet?
+### 6. What do you hope to achieve with AGNTCY? Have you seen any tangible payoff yet?
 
 The biggest thing I hope to achieve is a more **open and interoperable networking foundation for agent systems**.
 
@@ -142,7 +142,7 @@ That feedback loop between a real application ecosystem and foundational network
 
 ---
 
-# 7. What, if anything, has surprised you about working with or using AGNTCY?
+### 7. What, if anything, has surprised you about working with or using AGNTCY?
 
 One thing that surprised me positively is **how naturally the agent problem maps onto established distributed-systems concepts**.
 
@@ -173,7 +173,7 @@ That separation of concerns is something I really value.
 
 ---
 
-# 8. Do you have any plans to expand your use of AGNTCY?
+### 8. Do you have any plans to expand your use of AGNTCY?
 
 Yes. I see several areas where I'd like to continue contributing.
 
@@ -240,7 +240,7 @@ That is a very interesting research problem.
 
 ---
 
-# 9. Tell us specifically about what you've contributed back to AGNTCY.
+### 9. Tell us specifically about what you've contributed back to AGNTCY.
 
 My contribution has primarily been around **technical analysis, networking architecture, ecosystem collaboration, and identifying concrete areas where the libp2p community can contribute**.
 
@@ -281,7 +281,7 @@ So I'd describe my contribution as **connecting AGNTCY's agent-layer requirement
 
 ---
 
-# 10. Have you introduced others to AGNTCY? What would you say to other people thinking about contributing to or deploying AGNTCY?
+### 10. Have you introduced others to AGNTCY? What would you say to other people thinking about contributing to or deploying AGNTCY?
 
 Yes. A major part of my involvement has been bringing the AGNTCY architecture into conversations with people working on **libp2p, IPFS, Filecoin and decentralized networking**.
 
@@ -301,7 +301,7 @@ And importantly, contribution works both ways. AGNTCY provides a new and very in
 
 ---
 
-# 11. Is there a graphic or a URL we can include in your story? Can we link to your LinkedIn profile?
+### 11. Is there a graphic or a URL we can include in your story? Can we link to your LinkedIn profile?
 
 I'd suggest including a simple architecture graphic showing:
 
@@ -340,7 +340,7 @@ For the LinkedIn profile, I'd use your preferred public profile URL supplied dir
 
 ---
 
-# 12. Looking ahead — what are you most looking forward to, or most excited about, with AGNTCY or this space?
+### 12. Looking ahead — what are you most looking forward to, or most excited about, with AGNTCY or this space?
 
 I'm most excited about **what happens when agent ecosystems become large enough that networking itself becomes part of the intelligence and security problem**.
 
@@ -360,7 +360,7 @@ I also think the intersection with decentralized infrastructure is going to be v
 
 ---
 
-# 13. Could you describe AGNTCY, or your AGNTCY experience, in one word?
+### 13. Could you describe AGNTCY, or your AGNTCY experience, in one word?
 
 **Interoperability.**
 
