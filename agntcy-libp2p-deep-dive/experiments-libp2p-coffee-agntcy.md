@@ -2,9 +2,9 @@
 
 The CoffeeAGNTCY reference application is a useful way to demonstrate how A2A, SLIM, NATS, MCP, LangGraph, Identity, Observe, and Directory can work together in a multi-agent system.
 
-One area where I think libp2p could add significant value is **the network layer underneath these application-level protocols**.
+One area where we think libp2p could add significant value is **the network layer underneath these application-level protocols**.
 
-The important question is not necessarily "should AGNTCY replace SLIM/NATS with libp2p?" Rather:
+The important question we wish to uncover with agntcy deployments:
 
 > **Can libp2p provide an open, resilient, interoperable connectivity substrate that allows AGNTCY deployments to move from controlled/reference environments toward large-scale, independently operated agent networks?**
 
