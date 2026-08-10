@@ -23,7 +23,7 @@ At Venn Network, I launched the public testnet, onboarded more than 30 partners,
 
 I've also created and led global grant and developer programs, funding more than 30 projects and supporting the training of approximately 15,000 developers worldwide.
 
-A consistent theme in my work has been connecting **research, builders, funding, partnerships and real-world use cases** early. I focus heavily on execution—taking complex technologies and helping create the conditions for them to reach real users.
+A consistent theme in my work has been connecting **research, builders, funding, partnerships and real-world use cases** early. I focus heavily on executiontaking complex technologies and helping create the conditions for them to reach real users.
 
 That is also how I approach my work with libp2p and the emerging agent ecosystem.
 
@@ -90,7 +90,7 @@ The question I was interested in was:
 
 > **How do we build a networking foundation for potentially millions of agents that need to discover and communicate with each other across organizational and infrastructure boundaries?**
 
-That requires solving many familiar P2P problems—identity, discovery, routing, secure communication, NAT traversal and observability—but the semantics are different because we're now discovering **capabilities and services**, not just peers.
+That requires solving many familiar P2P problems: identity, discovery, routing, secure communication, NAT traversal and observability, but the semantics are different because we're now discovering **capabilities and services**, not just peers.
 
 ---
 
@@ -145,7 +145,7 @@ That's why the possibility of **hybrid networking** is so important. An organiza
 
 ---
 
-### 5. Where are you in the process of applying AGNTCY — trial, POC, deployment?
+### 5. Where are you in the process of applying AGNTCY: trial, POC, deployment?
 
 **Johanna:**
 I'd describe our current involvement as **active ecosystem and technical exploration, contribution and collaboration**, rather than positioning it as a production deployment of an AGNTCY application.
@@ -410,7 +410,7 @@ We'd provide our preferred LinkedIn URLs directly to the AGNTCY team for inclusi
 
 ---
 
-### 12. Looking ahead — what are you most looking forward to, or most excited about?
+### 12. Looking ahead, what are you most looking forward to, or most excited about?
 
 **Manu:**
 I'm most excited about the point where **agent networking becomes a first-class distributed-systems problem**.
