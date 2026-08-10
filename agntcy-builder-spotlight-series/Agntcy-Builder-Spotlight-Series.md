@@ -336,7 +336,7 @@ For AGNTCY and libp2p, I see that as helping build a bridge between the agent ec
 
 ---
 
-# 10. Have you introduced others to AGNTCY? What would you say to other people thinking about contributing to or deploying AGNTCY?
+### 10. Have you introduced others to AGNTCY? What would you say to other people thinking about contributing to or deploying AGNTCY?
 
 **Johanna:**
 Yes, and my advice would be: **start experimenting early**.
