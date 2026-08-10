@@ -330,11 +330,11 @@ The important message in the graphic should be that **AGNTCY operates at the age
 
 For links, I would include:
 
-* **AGNTCY:** [agntcy.org](https://agntcy.org?utm_source=chatgpt.com)
-* **AGNTCY GitHub:** [AGNTCY on GitHub](https://github.com/agntcy?utm_source=chatgpt.com)
-* **libp2p:** [libp2p.io](https://libp2p.io?utm_source=chatgpt.com)
-* **libp2p GitHub:** [libp2p on GitHub](https://github.com/libp2p?utm_source=chatgpt.com)
-* **IPFS:** [IPFS.tech](https://ipfs.tech?utm_source=chatgpt.com)
+* **AGNTCY:** [agntcy.org](https://agntcy.org)
+* **AGNTCY GitHub:** [AGNTCY on GitHub](https://github.com/agntcy)
+* **libp2p:** [libp2p.io](https://libp2p.io)
+* **libp2p GitHub:** [libp2p on GitHub](https://github.com/libp2p)
+* **IPFS:** [IPFS.tech](https://ipfs.tech)
 
 For the LinkedIn profile, I'd use your preferred public profile URL supplied directly to the AGNTCY team rather than putting an unverified profile URL into the submission.
 
