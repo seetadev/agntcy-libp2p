@@ -1,6 +1,6 @@
 ### AGNTCY Contributors Profile — Johanna Moran and Manu Sheel Gupta
 
-Technical Contributions via Github and WG meetings: Manu Sheel Gupta (Github: https://github.com/seetadev)
+Technical Contributions via Github, Discord, Slack and WG meetings: Manu Sheel Gupta (Github: https://github.com/seetadev)
 
 ### 1. Please tell us a bit more about your background.
 
