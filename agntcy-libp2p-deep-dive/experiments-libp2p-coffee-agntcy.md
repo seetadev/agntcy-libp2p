@@ -1,4 +1,4 @@
-# How libp2p could improve AGNTCY outcomes for prospective customers
+### How libp2p could improve AGNTCY outcomes for prospective customers
 
 The CoffeeAGNTCY reference application is a useful way to demonstrate how A2A, SLIM, NATS, MCP, LangGraph, Identity, Observe, and Directory can work together in a multi-agent system.
 
@@ -12,7 +12,7 @@ This could be particularly valuable for prospective customers who will eventuall
 
 ---
 
-## 1. From "agent communication" to "agent connectivity"
+### 1. From "agent communication" to "agent connectivity"
 
 CoffeeAGNTCY currently provides excellent examples of request/reply, unicast, group communication, pub/sub, streaming, A2A, and protocol-agnostic transports.
 
@@ -55,7 +55,7 @@ The goal would be to allow the application layer to remain protocol-agnostic whi
 
 ---
 
-# 2. Customer outcome: "my agents can actually reach each other"
+### 2. Customer outcome: "my agents can actually reach each other"
 
 For a prospective enterprise customer, connectivity reliability is likely to matter more than the underlying transport technology.
 
@@ -129,7 +129,7 @@ This could significantly simplify the deployment story.
 
 ---
 
-# 3. NAT traversal is especially relevant for real-world agents
+### 3. NAT traversal is especially relevant for real-world agents
 
 Many agent deployments will not run in public cloud environments with directly reachable addresses.
 
@@ -189,7 +189,7 @@ This is particularly interesting for enterprise deployments where exposing inbou
 
 ---
 
-# 4. Directory + libp2p could become a powerful discovery combination
+### 4. Directory + libp2p could become a powerful discovery combination
 
 AGNTCY Directory provides a natural place to discover agents and their capabilities.
 
@@ -240,7 +240,7 @@ This separation could be very useful as AGNTCY evolves toward larger agent ecosy
 
 ---
 
-# 5. Capability-aware and locality-aware routing
+### 5. Capability-aware and locality-aware routing
 
 There is another opportunity beyond basic connectivity.
 
@@ -293,7 +293,7 @@ Together they provide a much more complete agent discovery model.
 
 ---
 
-# 6. Resilience against infrastructure failures
+### 6. Resilience against infrastructure failures
 
 A centralized messaging architecture can work extremely well within a controlled environment.
 
@@ -337,7 +337,7 @@ This could be particularly valuable for:
 
 ---
 
-# 7. Multiplexing can reduce operational complexity
+### 7. Multiplexing can reduce operational complexity
 
 A multi-agent system can produce a large number of logical communication relationships.
 
@@ -372,7 +372,7 @@ This is worth exploring for large multi-agent workflows.
 
 ---
 
-# 8. A2A over libp2p
+### 8. A2A over libp2p
 
 I think one of the most interesting experiments would be a native A2A transport binding over libp2p.
 
@@ -437,7 +437,7 @@ This would make the comparison much more meaningful.
 
 ---
 
-# 9. SLIM + libp2p rather than SLIM versus libp2p
+### 9. SLIM + libp2p rather than SLIM versus libp2p
 
 I would avoid positioning this as a replacement discussion.
 
@@ -475,7 +475,7 @@ The same idea could potentially apply to other messaging systems.
 
 ---
 
-# 10. Protocol-agnostic connectivity
+### 10. Protocol-agnostic connectivity
 
 CoffeeAGNTCY already emphasizes protocol-agnostic bridges and reusable transports.
 
@@ -511,7 +511,7 @@ That could become particularly important as agent protocols continue to evolve.
 
 ---
 
-# 11. Stronger observability: from application traces to network traces
+### 11. Stronger observability: from application traces to network traces
 
 The existing Observe SDK gives AGNTCY application-level observability.
 
@@ -571,7 +571,7 @@ That distinction has substantial operational value.
 
 ---
 
-# 12. A Universal Agent Connectivity Observatory
+### 12. A Universal Agent Connectivity Observatory
 
 This could potentially become a concrete AGNTCY/libp2p collaboration.
 
@@ -626,7 +626,7 @@ toward:
 
 ---
 
-# 13. Connectivity scoring for agent selection
+### 13. Connectivity scoring for agent selection
 
 A further extension could be a **Connectivity Score** associated with a PeerID.
 
@@ -678,7 +678,7 @@ That is potentially much more useful to an enterprise than semantic discovery al
 
 ---
 
-# 14. Security benefits
+### 14. Security benefits
 
 libp2p can also contribute to the security model.
 
@@ -719,7 +719,7 @@ This can complement AGNTCY Identity rather than compete with it.
 
 ---
 
-# 15. Identity layering
+### 15. Identity layering
 
 It may be useful to explicitly distinguish:
 
@@ -763,7 +763,7 @@ This separation could be useful for enterprise security architectures.
 
 ---
 
-# 16. Privacy-preserving networking
+### 16. Privacy-preserving networking
 
 There is also a strong privacy angle.
 
@@ -801,7 +801,7 @@ This becomes increasingly relevant as agents interact across organizational boun
 
 ---
 
-# 17. Federated agent networks
+### 17. Federated agent networks
 
 A particularly interesting future architecture is a federation of independently operated agent networks.
 
@@ -839,7 +839,7 @@ That could be a strong answer to the question:
 
 ---
 
-# 18. Edge and intermittently connected agents
+### 18. Edge and intermittently connected agents
 
 Not every agent will be a cloud microservice.
 
@@ -868,7 +868,7 @@ This could make CoffeeAGNTCY more representative of the broader "Internet of Age
 
 ---
 
-# 19. Multi-cloud and cross-cloud deployments
+### 19. Multi-cloud and cross-cloud deployments
 
 Another concrete customer scenario:
 
@@ -915,7 +915,7 @@ This could significantly reduce integration complexity.
 
 ---
 
-# 20. Connection migration and transport agility
+### 20. Connection migration and transport agility
 
 Agents may change networks during their lifetime.
 
@@ -939,7 +939,7 @@ It also allows AGNTCY deployments to support different transport requirements wi
 
 ---
 
-# 21. DHT and decentralized discovery as an optional capability
+### 21. DHT and decentralized discovery as an optional capability
 
 AGNTCY Directory is likely to remain important for semantic and application-level discovery.
 
@@ -972,7 +972,7 @@ Instead, decentralized discovery can be introduced where it provides concrete va
 
 ---
 
-# 22. A practical CoffeeAGNTCY experiment
+### 22. A practical CoffeeAGNTCY experiment
 
 I think this could be tested without making a large architectural commitment.
 
@@ -1005,7 +1005,7 @@ Measure:
 
 ---
 
-## Experiment 2: Hybrid transport
+### Experiment 2: Hybrid transport
 
 Allow:
 
@@ -1023,7 +1023,7 @@ This would preserve the current architecture and allow empirical comparison.
 
 ---
 
-## Experiment 3: Failure injection
+### Experiment 3: Failure injection
 
 Introduce:
 
@@ -1049,7 +1049,7 @@ This would demonstrate whether libp2p improves actual customer outcomes rather t
 
 ---
 
-# 23. A "Production Readiness" benchmark
+### 23. A "Production Readiness" benchmark
 
 It could also be useful to define an AGNTCY Agent Network benchmark.
 
@@ -1075,7 +1075,7 @@ Rather than telling a customer that a system is "distributed" or "resilient", AG
 
 ---
 
-# 24. Customer-facing value propositions
+### 24. Customer-facing value propositions
 
 I think the technical work becomes much easier to communicate if mapped directly to customer outcomes.
 
@@ -1142,7 +1142,7 @@ Enabled by:
 
 ---
 
-# 25. Potential AGNTCY/libp2p architecture
+### 25. Potential AGNTCY/libp2p architecture
 
 A longer-term architecture could look approximately like:
 
@@ -1184,7 +1184,7 @@ The key abstraction would be:
 
 ---
 
-# 26. What I would prioritize first
+### 26. What I would prioritize first
 
 I would not try to integrate every libp2p capability immediately.
 
@@ -1243,7 +1243,7 @@ This would produce evidence that can be shown to prospective customers.
 
 ---
 
-# 27. The bigger opportunity
+### 27. The bigger opportunity
 
 The most interesting outcome may not be "CoffeeAGNTCY supports libp2p."
 
@@ -1279,7 +1279,7 @@ This would allow AGNTCY to remain focused on agent interoperability while levera
 
 ---
 
-# 28. Proposed discussion / next step
+### 28. Proposed discussion / next step
 
 Rather than proposing a large integration immediately, I would suggest starting with a concrete question:
 
