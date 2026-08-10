@@ -1279,25 +1279,3 @@ This would allow AGNTCY to remain focused on agent interoperability while levera
 
 ---
 
-### 28. Proposed discussion / next step
-
-Rather than proposing a large integration immediately, I would suggest starting with a concrete question:
-
-> **Would the AGNTCY community be interested in evaluating libp2p as an optional connectivity substrate for A2A/SLIM-based agent communication, initially through CoffeeAGNTCY?**
-
-A small proof of concept could answer several important questions:
-
-1. Can A2A messages be carried cleanly over libp2p streams?
-2. Can libp2p PeerIDs be associated with AGNTCY agent identities?
-3. Can Directory discovery be combined with libp2p network discovery?
-4. How much does NAT traversal improve real-world agent reachability?
-5. Can relay fallback improve workflow availability?
-6. Can libp2p telemetry integrate naturally with AGNTCY Observe?
-7. Can connectivity information improve agent selection?
-8. Does this provide measurable benefits in multi-cloud, edge, and cross-organization scenarios?
-9. Can SLIM/NATS and libp2p coexist behind the existing transport abstraction?
-10. What would a production-grade AGNTCY Agent Connectivity API look like?
-
-The outcome could be a small, measurable reference implementation rather than a speculative architectural change.
-
-If the experiments show meaningful improvements in **reachability, resilience, observability, privacy, and operational simplicity**, then libp2p could become a useful foundational networking option for AGNTCY deployments - especially as the ecosystem moves from reference applications toward independently operated, large-scale agent networks.
