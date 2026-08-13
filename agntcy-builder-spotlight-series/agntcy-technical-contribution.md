@@ -8,7 +8,7 @@ The work spans **architecture, implementation, testing, observability, and proto
 
 ### 1. AGNTCY–libp2p Technical Deep Dive
 
-Manu developed a dedicated **AGNTCY ↔ libp2p deep dive** documenting how libp2p can support AGNTCY's networking requirements and identifying relevant architectural, transport, and operational considerations.
+We have developed a dedicated **AGNTCY ↔ libp2p deep dive** documenting how libp2p can support AGNTCY's networking requirements and identifying relevant architectural, transport, and operational considerations.
 
 This provides a technical reference for the AGNTCY community and helps map libp2p capabilities to concrete AGNTCY requirements.
 
@@ -16,7 +16,7 @@ This provides a technical reference for the AGNTCY community and helps map libp2
 
 ### 2. AGNTCY DIR Architecture and libp2p Usage
 
-Manu has contributed to the **AGNTCY Directory working-group discussions** around improving the architecture and usage of libp2p within DIR.
+We have contributed to the **AGNTCY Directory working-group discussions** around improving the architecture and usage of libp2p within DIR.
 
 The work considers the networking layer more holistically, including:
 
@@ -56,7 +56,7 @@ This represents a concrete contribution at the dependency level, helping address
 
 ### 6. Mapping Recent libp2p Releases to AGNTCY
 
-Manu prepared a detailed analysis of **recent go-libp2p release features relevant to AGNTCY**.
+We prepared a detailed analysis of **recent go-libp2p release features relevant to AGNTCY**.
 
 Rather than treating the release as a generic dependency upgrade, the analysis maps relevant libp2p improvements to AGNTCY requirements and identifies areas where newer capabilities can strengthen the platform.
 
@@ -79,7 +79,7 @@ The broader observability work also includes:
 
 ### 8. IETF 126 Technical Engagement
 
-Manu also presented **two technical contributions at IETF 126 in Vienna**, extending the work beyond the AGNTCY/libp2p implementation itself into broader protocol, trust, telemetry, and observability discussions.
+We also presented **two technical contributions at IETF 126 in Vienna**, extending the work beyond the AGNTCY/libp2p implementation itself into broader protocol, trust, telemetry, and observability discussions.
 
 The associated observability material provides additional technical context for the measurement and trust architecture.
 
