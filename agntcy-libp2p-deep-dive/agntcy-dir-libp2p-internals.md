@@ -133,7 +133,7 @@ Instead of every participant depending on a single database or API, the DHT dist
 
 Multiple organizations can therefore participate in the same discovery network while retaining control over their own infrastructure.
 
-You can read more about this in the [AGNTCY routing documentation](https://dir.agntcy.org/latest/dir-component-routing/).
+You can read more about this in the [AGNTCY routing documentation](https://dir.agntcy.org/latest/dir/dir-component-routing/).
 
 ## Metadata retrieval
 
@@ -297,7 +297,7 @@ In the next post, we will look more closely at those open questions — and at w
 - [AGNTCY DIR on GitHub](https://github.com/agntcy/dir)
 - [AGNTCY Directory](https://dir.agntcy.org/)
 - [DIR Quick Start Guide](https://dir.agntcy.org/dir/dir-quickstart/)
-- [Directory Routing](https://dir.agntcy.org/latest/dir-component-routing/)
+- [Directory Routing](https://dir.agntcy.org/latest/dir/dir-component-routing/)
 - [Choosing a Directory Setup](https://dir.agntcy.org/latest/dir/dir-choosing-a-setup/)
 - [Directory Trust Model](https://dir.agntcy.org/latest/dir/dir-component-trust-model/)
 - [OIDC Authentication](https://dir.agntcy.org/latest/dir/dir-component-oidc-authentication/)
