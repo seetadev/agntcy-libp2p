@@ -350,5 +350,3 @@ It will be defined by how well we can **measure the network, understand its beha
 That is the open frontier — and it is a problem that is bigger than any single project.
 
 It is an opportunity for the AGNTCY, libp2p, IETF, and broader Internet engineering communities to build the foundations together.
-
-This version keeps the **technical depth and all the references from the original**, but makes the argument flow more naturally: **production → observability → measurement → verifiable telemetry → IETF → routing → trust → shared infrastructure → contributor opportunities**. It should read much more like a published technical blog than a structured project note.
