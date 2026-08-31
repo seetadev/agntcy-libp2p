@@ -1,4 +1,4 @@
-# Internet-Draft: Naming and Routing Substrate for Agentic AI
+### Internet-Draft: Naming and Routing Substrate for Agentic AI
 **Network Working Group**  
 **Internet-Draft**  
 **Intended Status:** Standards Track  
@@ -7,15 +7,15 @@
 
 ---
 
-# Naming and Routing Substrate for Agentic AI: The agent:// URI Scheme and Gossip-Enhanced Coordination Layer (GEACL)
+### Naming and Routing Substrate for Agentic AI: The agent:// URI Scheme and Gossip-Enhanced Coordination Layer (GEACL)
 **draft-ietf-dart-agent-routing-00**
 
-## Abstract
+### Abstract
 This document defines a topology-independent naming and routing substrate for decentralized multi-agent systems (MAS) [5, 9, 66]. It introduces the standard format for the `agent://` Uniform Resource Identifier (URI) scheme, which cryptographically decouples an agent's logical identity from its volatile physical network address [78, 87]. To scale discovery without relying on centralized coordination, this draft specifies a deterministic key derivation method for mapping capabilities directly into standard Kademlia-based Distributed Hash Tables (DHTs) [55, 77, 85]. Finally, this document outlines the architecture of the Gossip-Enhanced Agentic Coordination Layer (GEACL), defining how stochastic push-pull gossip, anti-entropy state reconciliation, and verifiable cryptographic delegation tokens enable resilient, zero-trust coordination across independent administrative domains [74, 80, 83].
 
 ---
 
-## 1. Introduction
+### 1. Introduction
 Traditional Internet routing and service discovery are tightly coupled to physical or logical endpoints (IP addresses, hostnames, and domain names) [19, 71]. While sufficient for static client-server models, this location-bound identity model fails when applied to large-scale, autonomous, and highly dynamic multi-agent systems (MAS) [19, 71]. In these emerging cognitive networks, agents undergo rapid horizontal scaling, frequent containerized redeployments, physical migrations across cloud providers, and temporary offline states [19, 71].
 
 Furthermore, as artificial intelligence matures from a localized application feature into an active, multi-hop participant in distributed industry workflows—such as site selection, pre-feasibility analysis, and underwriting in the Milken Institute's Infrastructure-Specific Cognition framework—the network must support dynamic, cross-boundary machine-to-machine collaboration [17, 18, 69, 70]. 
@@ -27,7 +27,7 @@ This document proposes a standardized framework that decoupling naming from rout
 
 ---
 
-## 2. Terminology and Conventions
+### 2. Terminology and Conventions
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.
 
 * **Agent:** An autonomous software entity capable of executing tasks, calling tools, reasoning, and coordinating workflows [14, 66].
@@ -38,7 +38,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ---
 
-## 3. Reference Architecture Model
+### 3. Reference Architecture Model
 The Naming and Routing Substrate for Agentic AI operates as a modular, transport-agnostic coordination layer. The reference architecture separates high-level cognitive workflows from lower-level network routing [34, 86].
 
 ```text
@@ -75,7 +75,7 @@ The Naming and Routing Substrate for Agentic AI operates as a modular, transport
 
 ---
 
-## 4. The agent:// URI Scheme
+### 4. The agent:// URI Scheme
 
 ### 4.1. Syntax and ABNF Grammar
 The `agent://` URI scheme defines a standard, topology-independent identifier for agents. The formal syntax is defined using Augmented Backus-Naur Form (ABNF) as specified in [RFC5234]:
@@ -104,7 +104,7 @@ DIGIT           = %x30-39         ; 0-9
 
 ---
 
-## 5. DHT-Based Service Discovery and Key Derivation
+### 5. DHT-Based Service Discovery and Key Derivation
 
 ### 5.1. Decentralized DHT-Kademlia Overlays
 To discover an agent's current network address (such as a libp2p multiaddress) without relying on a central database, nodes MUST support a decentralized lookup protocol over a Kademlia-based Distributed Hash Table (DHT) [52, 55, 77, 85].
@@ -123,7 +123,7 @@ The Kademlia nodes routing these keys return the matching multiaddresses, ensuri
 
 ---
 
-## 6. Cryptographic Capability Attestations
+### 6. Cryptographic Capability Attestations
 
 ### 6.1. PASETO Token Profile
 Every agent registering its capability and multiaddress location inside the DHT MUST sign its registration using a Platform-Agnostic SEcurity Token (PASETO v4.public) [5, 9]. This prevents DHT poisoning and identity hijacking [56, 89, 90].
@@ -175,7 +175,7 @@ To avoid network flooding in massive deployments, nodes MUST implement priority 
 
 ---
 
-## 8. N-Hop Context Delegation and Provenance
+### 8. N-Hop Context Delegation and Provenance
 
 ### 8.1. Causal Context Propagation
 In multi-agent systems, workflows involve long chains of delegation (e.g., Human -> Agent A -> Agent B -> Tool C) [27, 79]. Standardizing how context propagates ensures that downstream execution systems can determine the precise origin of any request [29, 80, 81].
@@ -206,7 +206,7 @@ Each downstream hop MUST verify the validity of all parent signatures up to the 
 
 ---
 
-## 9. Security Considerations
+### 9. Security Considerations
 
 ### 9.1. DHT Poisoning and Spoofing
 Attackers could try to publish fraudulent routing records to hijack traffic aimed at critical business agents. The verification rules in Section 6.2 (requiring PASETO validation against DNS-anchored HTTPS `.well-known` endpoints) MUST be strictly enforced by all routing peers [56, 89, 90].
@@ -218,7 +218,7 @@ Stochastic gossip protocols naturally broadcast metadata across a wide network o
 
 ---
 
-## 10. IANA Considerations
+### 10. IANA Considerations
 
 ### 10.1. URI Scheme Registration
 This section registers the `agent://` URI scheme in accordance with [RFC7595].
