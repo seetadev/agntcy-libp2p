@@ -375,7 +375,7 @@ And that is where the next stage of the Internet of Agents gets interesting.
 * [AGNTCY Directory on GitHub](https://github.com/agntcy/dir)
 * [AGNTCY Directory](https://dir.agntcy.org/)
 * [Directory Quick Start Guide](https://dir.agntcy.org/dir/dir-quickstart/)
-* [Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
+* [Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
 * [AI Catalog over Directory / Multispec](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)
 * [AGNTCY ADS IETF Draft](https://datatracker.ietf.org/doc/draft-mp-agntcy-ads)
 
