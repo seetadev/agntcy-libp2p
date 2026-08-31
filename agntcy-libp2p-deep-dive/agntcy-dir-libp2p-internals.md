@@ -173,7 +173,7 @@ In other words:
 
 **Discovery tells you what exists. Verification tells you whether you should act on it.**
 
-See the [AGNTCY Directory Trust Model](https://docs.agntcy.org/dir/dir-component-trust-model/) for more detail.
+See the [AGNTCY Directory Trust Model](https://dir.agntcy.org/latest/dir/dir-component-trust-model/) for more detail.
 
 ## Event distribution
 
@@ -299,7 +299,7 @@ In the next post, we will look more closely at those open questions — and at w
 - [DIR Quick Start Guide](https://dir.agntcy.org/dir/dir-quickstart/)
 - [Directory Routing](https://docs.agntcy.org/dir/dir-component-routing/)
 - [Choosing a Directory Setup](https://docs.agntcy.org/dir/dir-choosing-a-setup/)
-- [Directory Trust Model](https://docs.agntcy.org/dir/dir-component-trust-model/)
+- [Directory Trust Model](https://dir.agntcy.org/latest/dir/dir-component-trust-model/)
 - [OIDC Authentication](https://docs.agntcy.org/dir/dir-component-oidc-authentication/)
 - [Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
 - [AI Catalog over Directory / Multispec](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)
