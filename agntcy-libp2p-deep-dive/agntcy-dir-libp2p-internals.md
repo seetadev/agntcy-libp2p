@@ -1,4 +1,4 @@
-# Inside a Production Agent Discovery Pipeline: How AGNTCY Built Its Directory on libp2p
+### Inside a Production Agent Discovery Pipeline: How AGNTCY Built Its Directory on libp2p
 
 In the last post, we made the case for a shared networking layer across Internet of Agents projects. This one is the proof.
 
