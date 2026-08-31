@@ -1,7 +1,9 @@
 ### Request for IETF Side Meeting: Decentralized Agent Routing, Discovery, and Transport (DART)
 
 **Proposed Working Group / Discussion Group Focus Area:** Internet Area / Routing Area
+
 **Meeting Type:** IETF Side Meeting (Proposed BoF / Dispatch)
+
 **Estimated Duration:** 1.5 Hours
 
 ---
