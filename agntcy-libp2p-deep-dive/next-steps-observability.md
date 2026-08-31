@@ -75,9 +75,9 @@ Each provides a different perspective on the same underlying challenge.
 
 Our MAPRG work focuses on the broader measurement problem: how do we develop reusable methodologies for understanding large-scale decentralized networks?
 
-The [[IETF 126 MAPRG session](https://datatracker.ietf.org/meeting/126/session/maprg)](https://datatracker.ietf.org/meeting/126/session/maprg), [[agenda](https://datatracker.ietf.org/doc/agenda-126-maprg/)](https://datatracker.ietf.org/doc/agenda-126-maprg/), and [[meeting minutes](https://ietfminutes.org/minutes/ietf126/maprg.html)](https://ietfminutes.org/minutes/ietf126/maprg.html) provide the broader context.
+The [IETF 126 MAPRG session](https://datatracker.ietf.org/meeting/126/session/maprg), [agenda](https://datatracker.ietf.org/doc/agenda-126-maprg/), and [meeting minutes](https://ietfminutes.org/minutes/ietf126/maprg.html) provide the broader context.
 
-We also shared a presentation and discussion around a common measurement framework for large-scale libp2p deployments using CBOR-based verifiable telemetry. The [[MAPRG presentation recording](https://youtu.be/Rm4XAVJ4Pxs?si=Y3Ck43ttUEJ9oGJK)](https://youtu.be/Rm4XAVJ4Pxs?si=Y3Ck43ttUEJ9oGJK) is available for those who want to follow the discussion directly.
+We also shared a presentation and discussion around a common measurement framework for large-scale libp2p deployments using CBOR-based verifiable telemetry. The [MAPRG presentation recording](https://youtu.be/Rm4XAVJ4Pxs?si=Y3Ck43ttUEJ9oGJK) is available for those who want to follow the discussion directly.
 
 The direction we are exploring is deliberately broader than agent networks. Candidate measurements include peer discovery effectiveness, churn, client diversity, geographic distribution, connectivity patterns, NAT traversal success, relay dependency, routing performance, topology evolution, and protocol interoperability.
 
@@ -93,9 +93,9 @@ At IETF 126, Johanna Moran and Manu Sheel Gupta presented **Operating and Measur
 
 The presentation looks at what it means to actually operate agent networks on a decentralized networking substrate and which measurements become important as those networks scale.
 
-The relevant materials are available through the [[IETF 126 IEPG session](https://datatracker.ietf.org/meeting/126/session/iepg)](https://datatracker.ietf.org/meeting/126/session/iepg), the [[presentation](https://datatracker.ietf.org/doc/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu/)](https://datatracker.ietf.org/doc/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu/), and the [[IEPG presentation materials](https://datatracker.ietf.org/meeting/126/materials/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu-01)](https://datatracker.ietf.org/meeting/126/materials/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu-01).
+The relevant materials are available through the [IETF 126 IEPG session](https://datatracker.ietf.org/meeting/126/session/iepg), the [presentation](https://datatracker.ietf.org/doc/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu/), and the [IEPG presentation materials](https://datatracker.ietf.org/meeting/126/materials/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu-01).
 
-The [[IEPG session recording](https://youtu.be/g8q_u19vXzk?si=csIQQprAO1P49D2a)](https://youtu.be/g8q_u19vXzk?si=csIQQprAO1P49D2a) and [[Meetecho recording](https://meetecho-player.ietf.org/playout/?session=IETF126-IEPG-20260719-0800)](https://meetecho-player.ietf.org/playout/?session=IETF126-IEPG-20260719-0800) provide additional context.
+The [IEPG session recording](https://youtu.be/g8q_u19vXzk?si=csIQQprAO1P49D2a) and [Meetecho recording](https://meetecho-player.ietf.org/playout/?session=IETF126-IEPG-20260719-0800) provide additional context.
 
 This work is important because agent networks introduce an interesting combination of application-level and network-level behavior.
 
@@ -107,7 +107,7 @@ Understanding the performance of that complete chain requires measurements that 
 
 Research and operational discussion are only part of the process.
 
-The [[IETF 126 Hackathon](https://datatracker.ietf.org/meeting/126/session/hackathon)](https://datatracker.ietf.org/meeting/126/session/hackathon) provides a complementary environment for turning protocol ideas into working implementations and testing interoperability.
+The [IETF 126 Hackathon](https://datatracker.ietf.org/meeting/126/session/hackathon) provides a complementary environment for turning protocol ideas into working implementations and testing interoperability.
 
 For decentralized networking, this matters because many of the hardest problems only become apparent when implementations interact.
 
@@ -141,7 +141,7 @@ Deterministic encoding adds another important property: the same logical object 
 
 That becomes important when measurements need to be hashed, signed, content-addressed, or compared.
 
-Our work around [[CBOR-42](https://github.com/ipfs/specs/tree/main/block-layer/cbor-42)](https://github.com/ipfs/specs/tree/main/block-layer/cbor-42) explores this deterministic encoding layer in the context of content-addressed systems.
+Our work around [CBOR-42](https://github.com/ipfs/specs/tree/main/block-layer/cbor-42) explores this deterministic encoding layer in the context of content-addressed systems.
 
 There is also ongoing work to make the relationship between VTO and deterministic CBOR more concrete.
 
@@ -372,44 +372,40 @@ And that is where the next stage of the Internet of Agents gets interesting.
 
 ### AGNTCY Directory
 
-* [[AGNTCY Directory on GitHub](https://github.com/agntcy/dir)](https://github.com/agntcy/dir)
-* [[AGNTCY Directory](https://dir.agntcy.org/)](https://dir.agntcy.org/)
-* [[Directory Quick Start Guide](https://dir.agntcy.org/dir/dir-quickstart/)](https://dir.agntcy.org/dir/dir-quickstart/)
-* [[Directory Routing](https://docs.agntcy.org/dir/dir-component-routing/)](https://docs.agntcy.org/dir/dir-component-routing/)
-* [[Choosing a Directory Setup](https://docs.agntcy.org/dir/dir-choosing-a-setup/)](https://docs.agntcy.org/dir/dir-choosing-a-setup/)
-* [[Directory Trust Model](https://docs.agntcy.org/dir/dir-component-trust-model/)](https://docs.agntcy.org/dir/dir-component-trust-model/)
-* [[OIDC Authentication](https://docs.agntcy.org/dir/dir-component-oidc-authentication/)](https://docs.agntcy.org/dir/dir-component-oidc-authentication/)
-* [[Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
-* [[AI Catalog over Directory / Multispec](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)
-* [[AGNTCY ADS IETF Draft](https://datatracker.ietf.org/doc/draft-mp-agntcy-ads)](https://datatracker.ietf.org/doc/draft-mp-agntcy-ads)
+* [AGNTCY Directory on GitHub](https://github.com/agntcy/dir)
+* [AGNTCY Directory](https://dir.agntcy.org/)
+* [Directory Quick Start Guide](https://dir.agntcy.org/dir/dir-quickstart/)
+* [Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
+* [AI Catalog over Directory / Multispec](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)
+* [AGNTCY ADS IETF Draft](https://datatracker.ietf.org/doc/draft-mp-agntcy-ads)
 
 ### IETF 126 — MAPRG
 
-* [[IETF 126 MAPRG session](https://datatracker.ietf.org/meeting/126/session/maprg)](https://datatracker.ietf.org/meeting/126/session/maprg)
-* [[MAPRG agenda](https://datatracker.ietf.org/doc/agenda-126-maprg/)](https://datatracker.ietf.org/doc/agenda-126-maprg/)
-* [[MAPRG meeting minutes](https://ietfminutes.org/minutes/ietf126/maprg.html)](https://ietfminutes.org/minutes/ietf126/maprg.html)
-* [[MAPRG presentation / recording](https://youtu.be/Rm4XAVJ4Pxs?si=Y3Ck43ttUEJ9oGJK)](https://youtu.be/Rm4XAVJ4Pxs?si=Y3Ck43ttUEJ9oGJK)
+* [IETF 126 MAPRG session](https://datatracker.ietf.org/meeting/126/session/maprg)
+* [MAPRG agenda](https://datatracker.ietf.org/doc/agenda-126-maprg/)
+* [MAPRG meeting minutes](https://ietfminutes.org/minutes/ietf126/maprg.html)
+* [MAPRG presentation / recording](https://youtu.be/Rm4XAVJ4Pxs?si=Y3Ck43ttUEJ9oGJK)
 
 ### IETF 126 — IEPG
 
-* [[IETF 126 IEPG session](https://datatracker.ietf.org/meeting/126/session/iepg)](https://datatracker.ietf.org/meeting/126/session/iepg)
-* [[Operating and Measuring Agent Networks over libp2p — IETF presentation](https://datatracker.ietf.org/doc/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu/)](https://datatracker.ietf.org/doc/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu/)
-* [[IEPG presentation materials](https://datatracker.ietf.org/meeting/126/materials/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu-01)](https://datatracker.ietf.org/meeting/126/materials/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu-01)
-* [[IEPG session recording](https://youtu.be/g8q_u19vXzk?si=csIQQprAO1P49D2a)](https://youtu.be/g8q_u19vXzk?si=csIQQprAO1P49D2a)
-* [[IEPG Meetecho recording](https://meetecho-player.ietf.org/playout/?session=IETF126-IEPG-20260719-0800)](https://meetecho-player.ietf.org/playout/?session=IETF126-IEPG-20260719-0800)
+* [IETF 126 IEPG session](https://datatracker.ietf.org/meeting/126/session/iepg)
+* [Operating and Measuring Agent Networks over libp2p — IETF presentation](https://datatracker.ietf.org/doc/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu/)
+* [IEPG presentation materials](https://datatracker.ietf.org/meeting/126/materials/slides-126-iepg-sessa-iepg-operating-and-measuring-agent-networks-over-libp2p-johanna-manu-01)
+* [IEPG session recording](https://youtu.be/g8q_u19vXzk?si=csIQQprAO1P49D2a)
+* [IEPG Meetecho recording](https://meetecho-player.ietf.org/playout/?session=IETF126-IEPG-20260719-0800)
 
 ### IETF 126 — Hackathon
 
-* [[IETF 126 Hackathon](https://datatracker.ietf.org/meeting/126/session/hackathon)](https://datatracker.ietf.org/meeting/126/session/hackathon)
+* [IETF 126 Hackathon](https://datatracker.ietf.org/meeting/126/session/hackathon)
 
 ### Verifiable Telemetry and CBOR
 
-* [[CBOR-42](https://github.com/ipfs/specs/tree/main/block-layer/cbor-42)](https://github.com/ipfs/specs/tree/main/block-layer/cbor-42)
-* [[AGNTCY ADS IETF Draft](https://datatracker.ietf.org/doc/draft-mp-agntcy-ads)](https://datatracker.ietf.org/doc/draft-mp-agntcy-ads)
+* [CBOR-42](https://github.com/ipfs/specs/tree/main/block-layer/cbor-42)
+* [AGNTCY ADS IETF Draft](https://datatracker.ietf.org/doc/draft-mp-agntcy-ads)
 
 ### Related work
 
-* [[AGNTCY Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
-* [[AI Catalog over Directory / Multispec](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)
-* [[libp2p](https://libp2p.io/)](https://libp2p.io/)
-* [[IPFS](https://ipfs.tech/)](https://ipfs.tech/)
+* [AGNTCY Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
+* [AI Catalog over Directory / Multispec](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)
+* [libp2p](https://libp2p.io/)
+* [IPFS](https://ipfs.tech/)
