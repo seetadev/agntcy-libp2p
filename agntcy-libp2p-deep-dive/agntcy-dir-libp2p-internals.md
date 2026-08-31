@@ -133,7 +133,7 @@ Instead of every participant depending on a single database or API, the DHT dist
 
 Multiple organizations can therefore participate in the same discovery network while retaining control over their own infrastructure.
 
-You can read more about this in the [AGNTCY routing documentation](https://docs.agntcy.org/dir/dir-component-routing/).
+You can read more about this in the [AGNTCY routing documentation](https://dir.agntcy.org/latest/dir-component-routing/).
 
 ## Metadata retrieval
 
@@ -227,7 +227,7 @@ This is particularly valuable in an agent ecosystem where competitors, partners,
 
 The Directory architecture also supports different deployment models rather than requiring every organization to operate the same way.
 
-See [Choosing a Directory Setup](https://docs.agntcy.org/dir/dir-choosing-a-setup/) for more detail on private, networked, and federated topologies.
+See [Choosing a Directory Setup](https://dir.agntcy.org/latest/dir-choosing-a-setup/) for more detail on private, networked, and federated topologies.
 
 ## Hybrid deployment in practice
 
@@ -248,7 +248,7 @@ This is particularly important for enterprise environments.
 
 Organizations do not need to throw out their existing identity and access infrastructure. The decentralized components can be focused specifically on discovery and routing, where centralization can create operational and architectural risks.
 
-The Directory's authentication model is documented in the [OIDC Gateway documentation](https://docs.agntcy.org/dir/dir-component-oidc-authentication/).
+The Directory's authentication model is documented in the [OIDC Gateway documentation](https://dir.agntcy.org/latest/dir/dir-component-oidc-authentication/).
 
 ## Try the public testbed
 
@@ -258,7 +258,7 @@ For developers who want to experiment with the Directory, joining the public tes
 /dns4/routing.ads.outshift.io/tcp/5555/p2p/12D3KooWLf9p3cedc86xGQBaqak6rAFmQk1HxKAK1yh7umHE3amu
 ```
 
-You can also start with the [DIR Quick Start Guide](https://dir.agntcy.org/dir/dir-quickstart/), explore the [Directory documentation](https://dir.agntcy.org/), or dive directly into the [source code on GitHub](https://github.com/agntcy/dir).
+You can also start with the [DIR Quick Start Guide](https://dir.agntcy.org/latest/dir/dir-quickstart/), explore the [Directory documentation](https://dir.agntcy.org/), or dive directly into the [source code on GitHub](https://github.com/agntcy/dir).
 
 ## Why this is a useful reference point
 
@@ -297,10 +297,10 @@ In the next post, we will look more closely at those open questions — and at w
 - [AGNTCY DIR on GitHub](https://github.com/agntcy/dir)
 - [AGNTCY Directory](https://dir.agntcy.org/)
 - [DIR Quick Start Guide](https://dir.agntcy.org/dir/dir-quickstart/)
-- [Directory Routing](https://docs.agntcy.org/dir/dir-component-routing/)
-- [Choosing a Directory Setup](https://docs.agntcy.org/dir/dir-choosing-a-setup/)
+- [Directory Routing](https://dir.agntcy.org/latest/dir-component-routing/)
+- [Choosing a Directory Setup](https://dir.agntcy.org/latest/dir-choosing-a-setup/)
 - [Directory Trust Model](https://dir.agntcy.org/latest/dir/dir-component-trust-model/)
-- [OIDC Authentication](https://docs.agntcy.org/dir/dir-component-oidc-authentication/)
+- [OIDC Authentication](https://dir.agntcy.org/latest/dir/dir-component-oidc-authentication/)
 - [Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
 - [AI Catalog over Directory / Multispec](https://blogs.agntcy.org/technical/2026/06/17/ai-catalog-over-directory.html)
 - [AGNTCY ADS IETF Draft](https://datatracker.ietf.org/doc/draft-mp-agntcy-ads)
