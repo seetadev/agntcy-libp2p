@@ -227,7 +227,7 @@ This is particularly valuable in an agent ecosystem where competitors, partners,
 
 The Directory architecture also supports different deployment models rather than requiring every organization to operate the same way.
 
-See [Choosing a Directory Setup](https://dir.agntcy.org/latest/dir-choosing-a-setup/) for more detail on private, networked, and federated topologies.
+See [Choosing a Directory Setup](https://dir.agntcy.org/latest/dir/dir-choosing-a-setup/) for more detail on private, networked, and federated topologies.
 
 ## Hybrid deployment in practice
 
@@ -298,7 +298,7 @@ In the next post, we will look more closely at those open questions — and at w
 - [AGNTCY Directory](https://dir.agntcy.org/)
 - [DIR Quick Start Guide](https://dir.agntcy.org/dir/dir-quickstart/)
 - [Directory Routing](https://dir.agntcy.org/latest/dir-component-routing/)
-- [Choosing a Directory Setup](https://dir.agntcy.org/latest/dir-choosing-a-setup/)
+- [Choosing a Directory Setup](https://dir.agntcy.org/latest/dir/dir-choosing-a-setup/)
 - [Directory Trust Model](https://dir.agntcy.org/latest/dir/dir-component-trust-model/)
 - [OIDC Authentication](https://dir.agntcy.org/latest/dir/dir-component-oidc-authentication/)
 - [Distributed Announce and Discovery](https://blogs.agntcy.org/technical/2026/02/19/dir-v1.html)
