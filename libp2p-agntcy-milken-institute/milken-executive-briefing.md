@@ -22,7 +22,7 @@ The global investment and technology stack for AI is traditionally defined by th
 2. **Intelligence / Model Layer:** Foundation models, inference systems, and multimodal capabilities.
 3. **Applications / Services Layer:** Products, workflows, and services utilizing AI.
 
-While the first phase of AI focused on compute and the second on model capability, the emerging third phase is entirely about **coordination**. In complex, multi-stakeholder industries like global infrastructure development, workflows are highly fragmented. For autonomous machine intelligence to execute tasks—such as pre-feasibility analysis, climate-risk underwriting, and capital allocation—agents must discover, authenticate, and communicate with other independent agents across corporate and administrative boundaries.
+While the first phase of AI focused on compute and the second on model capability, the emerging third phase is entirely about **coordination**. In complex, multi-stakeholder industries like global infrastructure development, workflows are highly fragmented. For autonomous machine intelligence to execute tasks, such as pre-feasibility analysis, climate-risk underwriting, and capital allocation, agents must discover, authenticate, and communicate with other independent agents across corporate and administrative boundaries.
 
 Without open standards, these interactions will inevitably default to closed, centralized, proprietary platforms. This creates massive antitrust targets, systemic points of network failure, and significant vendor lock-in. 
 
@@ -79,7 +79,7 @@ We have identified four core protocol primitives for immediate standardization:
 
 ### Spec B: Decentralized Capability-Based Service Discovery
 *   **Core Problem:** To model risk, an underwriting agent must dynamically locate a certified "Climate Risk Assessment" agent. Relying on a centralized corporate directory introduces a single point of failure and systemic risk.
-*   **IETF Standard:** Establish protocol mechanisms that shift discovery from **location → capability** (`identity + capability + policy + reachability`).
+*   **IETF Standard:** Establish protocol mechanisms that shift discovery from **location to capability** (`identity + capability + policy + reachability`).
 *   **Substrate Integration:** Leverages a **Kademlia-based Distributed Hash Table (DHT)**. Agents cryptographically announce their capabilities to the DHT, enabling any authorized peer to resolve and discover their network multiaddress (`multiaddr`) in $O(\log N)$ hops without a centralized broker.
 
 ### Spec C: Verifiable Multi-Hop Delegation and Provenance
