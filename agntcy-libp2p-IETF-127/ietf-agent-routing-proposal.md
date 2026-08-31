@@ -93,7 +93,9 @@ type-suffix     = first-char 25base32char
 ### 4.2 Distributed Discovery & DHT Key Derivation
 To enable decentralized lookup without central registries, DART leverages a Kademlia-style Distributed Hash Table (DHT). The DHT lookup key is derived deterministically from the canonical trust root and capability path:
 
+```text
 $$\text{key} = \text{SHA256}(\text{canonical}(\text{trust\_root}) \parallel \text{"/"} \parallel \text{canonical}(\text{cap\_path}))$$
+```
 
 This derivation ensures:
 - **Trust-Root Scoping:** Preventing cross-organizational pollution; queries return records explicitly scoped to trusted administrative authorities.
