@@ -1,4 +1,4 @@
-# EXECUTIVE BRIEFING MEMO
+### EXECUTIVE BRIEFING MEMO
 
 **TO:** Leadership, The Milken Institute  
 **FROM:** Strategic Architecture Team: Johanna and Manu (libp2p × AGNTCY)  
