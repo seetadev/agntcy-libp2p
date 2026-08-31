@@ -18,7 +18,7 @@ This document defines a topology-independent naming and routing substrate for de
 ### 1. Introduction
 Traditional Internet routing and service discovery are tightly coupled to physical or logical endpoints (IP addresses, hostnames, and domain names). While sufficient for static client-server models, this location-bound identity model fails when applied to large-scale, autonomous, and highly dynamic multi-agent systems (MAS). In these emerging cognitive networks, agents undergo rapid horizontal scaling, frequent containerized redeployments, physical migrations across cloud providers, and temporary offline states.
 
-Furthermore, as artificial intelligence matures from a localized application feature into an active, multi-hop participant in distributed industry workflows—such as site selection, pre-feasibility analysis, and underwriting in the Milken Institute's Infrastructure-Specific Cognition framework—the network must support dynamic, cross-boundary machine-to-machine collaboration. 
+Furthermore, as artificial intelligence matures from a localized application feature into an active, multi-hop participant in distributed industry workflows, such as site selection, pre-feasibility analysis, and underwriting in the Milken Institute's Infrastructure-Specific Cognition framework, the network must support dynamic, cross-boundary machine-to-machine collaboration. 
 
 This document proposes a standardized framework that decoupling naming from routing for agentic systems, addressing three core interoperability challenges:
 1. **Network Interoperability:** Enabling agents to communicate across heterogeneous network environments (including NATs, firewalls, and private subnets) without requiring centralized proxies.
