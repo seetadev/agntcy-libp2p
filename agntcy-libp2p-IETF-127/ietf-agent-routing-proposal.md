@@ -132,7 +132,7 @@ Standardizing the wire protocols for Gossip-Enhanced Agentic Coordination Layer 
 
 | Time | Duration | Topic | Speaker |
 | :--- | :--- | :--- | :--- |
-| 13:00 | 10 Min | **Welcome, Agenda Bashing, and Context Setting** | Co-Chairs |
+| 13:00 | 10 Min | **Welcome, Agenda Bashing, and Context Setting** | Co-Chairs, Johanna, Manu, Milken Institute (TBD) |
 | 13:10 | 20 Min | **Problem Statement: Decentralized Naming and Routing Gaps in MAS** | Luca Muscariello / Vijoy Pandey |
 | 13:30 | 25 Min | **Technical Deep Dive: The `agent://` URI Grammar & DHT Key Derivation** | Roland R. Rodriguez, Jr. |
 | 13:55 | 20 Min | **GEACL & Gossip Substrates: Layering Epidemic Protocols Beneath A2A/MCP** | Mansura Habiba / Nafiul I. Khan |
