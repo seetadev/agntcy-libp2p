@@ -101,7 +101,7 @@ We drive adoption via our role in the AGNTCY Technical Steering Committee, colla
 
 7. Operational Security & The Trust Fabric
 
-In the Cognitive Layer, "Zero-Trust" is not a feature—it is a requirement. MeshWorks treats security as an infrastructure primitive.
+In the Cognitive Layer, "Zero-Trust" is not a feature, it is a requirement. MeshWorks treats security as an infrastructure primitive.
 
 ### Verification Protocols
 
