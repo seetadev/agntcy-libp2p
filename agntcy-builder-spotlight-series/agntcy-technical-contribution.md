@@ -85,7 +85,7 @@ The associated observability material provides additional technical context for 
 
 ### Overall Contribution
 
-Taken together, Manu's recent AGNTCY work is not limited to **using libp2p as a dependency**. It is focused on helping shape **how libp2p can be integrated, abstracted, tested, upgraded, and observed within an Internet-of-Agents environment**.
+Taken together, Johanna and Manu's recent AGNTCY work is not limited to **using libp2p as a dependency**. It is focused on helping shape **how libp2p can be integrated, abstracted, tested, upgraded, and observed within an Internet-of-Agents environment**.
 
 The contribution can be viewed across three complementary layers:
 
